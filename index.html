@@ -1,314 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arome</title>
+    <title>Arome | Home</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght=500;600;700&family=Poppins:wght=300;400;500&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-
 <body>
 
+<!-- حقن النافبار ديناميكياً -->
+<div id="navbar"></div>
 
-<header>
+<section class="hero">
+    <video id="heroVideo" autoplay muted loop playsinline>
+        <source src="videos/hero.mp4" type="video/mp4">
+    </video>
+    <div id="videoCursor">PAUSE</div>
+</section>
 
-    <!-- Navbar -->
-
-    <nav class="navbar">
-
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/notes/logo.png" alt="Arome Logo">
-            </a>
-        </div>
-
-        <ul class="nav-links">
-
-            <li><a href="#">Home</a></li>
-            <li><a href="#">All Perfumes</a></li>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Limited Edition</a></li>
-            <li><a href="#">Shop by Brand</a></li>
-
-        </ul>
-
-        <div class="nav-icons">
-
-            <a href="#">Search</a>
-            <a href="#">Cart</a>
-
-        </div>
-
-    </nav>
-
-    <!-- مكان الفيديو -->
-
-    <section class="hero">
-
-        <video id="heroVideo" autoplay muted loop playsinline>
-            <source src="videos/hero.mp4" type="video/mp4">
-        </video>
-
-        <div id="videoCursor">
-            PAUSE
-        </div>
-
-    </section>
-    <!-- ========================= -->
-    <!-- Best Sellers -->
-    <!-- ========================= -->
-
-    <section class="best-sellers">
-
-        <h2>Best Sellers</h2>
-
-        <div class="slider">
-
-            <button class="arrow left">&#10094;</button>
-
-            <div class="products">
-
-                <!-- Product 1 -->
-                <div class="product-card category-men">
-                    <span class="glass-tag men">Men</span>
-                    <button class="wishlist-btn" data-tooltip="Add to Wishlist">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                    <img src="images/products/perfume1.jpeg" alt="Perfume 1">
-
-                    <h3>Dior Sauvage</h3>
-
-                    <p class="brand">Dior</p>
-
-                    <p class="description">
-                        Fresh woody fragrance with bergamot notes.
-                    </p>
-
-                    <p class="price">$120</p>
-
-                    <a href="sauvage.html" class="btn">
-                        View Details
-                    </a>
-
-                </div>
-
-                <!-- Product 2 -->
-                <div class="product-card category-women">
-                    <span class="glass-tag women">Women</span>
-                    <button class="wishlist-btn" data-tooltip="Add to Wishlist">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-
-                    <img src="images/products/perfume2.jpeg" alt="Perfume 2">
-
-                    <h3>Libre</h3>
-
-                    <p class="brand">YSL</p>
-
-                    <p class="description">
-                        Elegant floral fragrance .
-                    </p>
-
-                    <p class="price">$145</p>
-
-                    <a href="libre.html" class="btn">
-                        View Details
-                    </a>
-
-                </div>
-
-                <!-- Product 3 -->
-                <div class="product-card category-men">
-                    <span class="glass-tag men">Men</span>
-                    <button class="wishlist-btn" data-tooltip="Add to Wishlist">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                    <img src="images/products/perfume3.jpeg" alt="Perfume 3">
-
-                    <h3>Creed Aventus</h3>
-
-                    <p class="brand">Creed</p>
-
-                    <p class="description">
-                        Luxury fruity woody fragrance.
-                    </p>
-
-                    <p class="price">$350</p>
-
-                    <a href="aventus.html" class="btn">
-                        View Details
-                    </a>
-
-                </div>
-
-                <!-- Product 4 -->
-                <div class="product-card category-women">
-                    <span class="glass-tag women">Women</span>
-                    <button class="wishlist-btn" data-tooltip="Add to Wishlist">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-
-                    <img src="images/products/perfume4.jpeg" alt="Perfume 4">
-
-                    <h3>Coco Chanel</h3>
-
-                    <p class="brand">Chanel</p>
-
-                    <p class="description">
-                        Timeless elegant floral fragrance.
-                    </p>
-
-                    <p class="price">$170</p>
-
-                    <a href="coco.html" class="btn">
-                        View Details
-                    </a>
-
-                </div>
-
+<!-- Best Sellers -->
+<section class="best-sellers">
+    <h2>Best Sellers</h2>
+    <div class="slider">
+        <button class="arrow left">&#10094;</button>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product-card category-men">
+                <span class="glass-tag men">Men</span>
+                <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <img src="images/products/perfume1.jpeg" alt="Perfume 1">
+                <h3>Dior Sauvage</h3>
+                <p class="brand">Dior</p>
+                <p class="description">Fresh woody fragrance with bergamot notes.</p>
+                <p class="price">$120</p>
+                <a href="sauvage.html" class="btn">View Details</a>
             </div>
 
-            <button class="arrow right">&#10095;</button>
+            <!-- Product 2 -->
+            <div class="product-card category-women">
+                <span class="glass-tag women">Women</span>
+                <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <img src="images/products/perfume2.jpeg" alt="Perfume 2">
+                <h3>Libre</h3>
+                <p class="brand">YSL</p>
+                <p class="description">Elegant floral fragrance.</p>
+                <p class="price">$145</p>
+                <a href="libre.html" class="btn">View Details</a>
+            </div>
 
+            <!-- Product 3 -->
+            <div class="product-card category-men">
+                <span class="glass-tag men">Men</span>
+                <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <img src="images/products/perfume3.jpeg" alt="Perfume 3">
+                <h3>Creed Aventus</h3>
+                <p class="brand">Creed</p>
+                <p class="description">Luxury fruity woody fragrance.</p>
+                <p class="price">$350</p>
+                <a href="aventus.html" class="btn">View Details</a>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card category-women">
+                <span class="glass-tag women">Women</span>
+                <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <img src="images/products/perfume4.jpeg" alt="Perfume 4">
+                <h3>Coco Chanel</h3>
+                <p class="brand">Chanel</p>
+                <p class="description">Timeless elegant floral fragrance.</p>
+                <p class="price">$170</p>
+                <a href="coco.html" class="btn">View Details</a>
+            </div>
         </div>
+        <button class="arrow right">&#10095;</button>
+    </div>
+</section>
 
-    </section>
-
-</header>
-
+<!-- Main Context -->
 <main>
-
-    <!-- Fragrance Notes -->
-
     <section class="notes-section">
-
         <h2>Find Your Favorite Note</h2>
-
         <div class="notes-container">
-
-            <div class="note-card">
-                <a href="musk.html">
-                    <img src="images/notes/musk.jpeg" alt="Musk">
-                    <h3>Musk</h3>
-                </a>
-            </div>
-
-            <div class="note-card">
-                <a href="amber.html">
-                    <img src="images/notes/amber.jpeg" alt="Amber">
-                    <h3>Amber</h3>
-                </a>
-            </div>
-
-            <div class="note-card">
-                <a href="vanilla.html">
-                    <img src="images/notes/vanilla.jpeg" alt="Vanilla">
-                    <h3>Vanilla</h3>
-                </a>
-            </div>
-
-            <div class="note-card">
-                <a href="lemon.html">
-                    <img src="images/notes/lemon.jpeg" alt="Lemon">
-                    <h3>Lemon</h3>
-                </a>
-            </div>
-
-            <div class="note-card">
-                <a href="rose.html">
-                    <img src="images/notes/rose.jpeg" alt="Rose">
-                    <h3>Rose</h3>
-                </a>
-            </div>
-
-            <div class="note-card">
-                <a href="woody.html">
-                    <img src="images/notes/woody.jpeg" alt="Woody">
-                    <h3>Woody</h3>
-                </a>
-            </div>
-
+            <div class="note-card"><a href="musk.html"><img src="images/notes/musk.jpeg" alt="Musk"><h3>Musk</h3></a></div>
+            <div class="note-card"><a href="amber.html"><img src="images/notes/amber.jpeg" alt="Amber"><h3>Amber</h3></a></div>
+            <div class="note-card"><a href="vanilla.html"><img src="images/notes/vanilla.jpeg" alt="Vanilla"><h3>Vanilla</h3></a></div>
+            <div class="note-card"><a href="lemon.html"><img src="images/notes/lemon.jpeg" alt="Lemon"><h3>Lemon</h3></a></div>
+            <div class="note-card"><a href="rose.html"><img src="images/notes/rose.jpeg" alt="Rose"><h3>Rose</h3></a></div>
+            <div class="note-card"><a href="woody.html"><img src="images/notes/woody.jpeg" alt="Woody"><h3>Woody</h3></a></div>
         </div>
-
     </section>
-
 </main>
 
+<!-- حقن الفوتر ديناميكياً -->
+<div id="footer"></div>
 
-
+<!-- Scripts -->
+<script src="js/components.js"></script>
 <script src="js/script.js"></script>
-
-<!-- ========================= -->
-<!-- Footer -->
-<!-- ========================= -->
-
-<footer class="footer">
-
-    <div class="footer-container">
-
-        <!-- Follow Us -->
-
-        <div class="footer-follow">
-
-            <h3>Follow Us</h3>
-
-            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-
-            <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
-
-            <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-
-        </div>
-
-        <!-- Logo -->
-
-        <div class="footer-logo">
-
-            <img src="images/notes/logo.png" alt="AROME Logo">
-
-            <h2 class="footer-title">
-                Luxury Fragrances
-            </h2>
-
-            <p class="footer-subtitle">
-                Crafted for Every Personality
-            </p>
-
-        </div>
-
-        <!-- Contact -->
-
-        <div class="footer-contact">
-
-            <h3>Contact Us</h3>
-
-            <p>Nablus, Palestine</p>
-
-            <a href="mailto:info@arome.com">
-                info@arome.com
-            </a>
-
-            <p>+970 59 XXX XXXX</p>
-
-        </div>
-
-    </div>
-
-    <hr>
-
-    <p class="copyright">
-        © 2026 AROME | Designed by Raghd Mansour & Farah Amer
-    </p>
-
-</footer>
 </body>
 </html>

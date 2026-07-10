@@ -1,0 +1,127 @@
+/* ========================= */
+/* Navbar */
+/* ========================= */
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #6F4E37;
+}
+
+/* ========================= */
+/* Logo */
+/* ========================= */
+.logo, .logo a{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    transition: .3s;
+}
+
+.logo img:hover{
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* Links */
+/* ========================= */
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    transition: .3s;
+}
+
+.nav-links a:hover{
+    color: #D8C3A5;
+}
+
+/* ========================= */
+/* Dropdown */
+/* ========================= */
+.dropdown{
+    position: relative;
+}
+
+.dropdown-menu{
+    position: absolute;
+    top: 100%; /* تم تعديلها لتبدأ مباشرة من حافة العنصر الأب وتمنع اختفاء القائمة */
+    left: 0;
+    background: #6F4E37;
+    width: 180px;
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px); /* تأثير حركة ناعم من الأسفل للأعلى عند الظهور */
+    transition: opacity .3s, visibility .3s, transform .3s;
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li{
+    padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+    display: block;
+}
+
+.dropdown-menu li:hover{
+    background: #8B5E3C;
+}
+
+/* ========================= */
+/* Icons */
+/* ========================= */
+.nav-icons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-icons a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.nav-icons a:hover{
+    color: #D8C3A5;
+}
+
+/* ========================= */
+/* Register Button */
+/* ========================= */
+.register-btn{
+    padding: 10px 22px;
+    border: 1px solid #D8C3A5;
+    border-radius: 30px;
+}
+
+.register-btn:hover{
+    background: #D8C3A5;
+    color: #6F4E37 !important;
+}

@@ -1,0 +1,177 @@
+/* ========================= */
+/* Reset */
+/* ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f3ed;
+}
+
+/* ========================= */
+/* Products Page Layout */
+/* ========================= */
+.products-page {
+    padding: 80px 60px;
+    background: #fffaf5;
+    min-height: 100vh;
+}
+
+.page-title {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    color: #5C4033;
+    margin-bottom: 50px;
+}
+
+/* ========================= */
+/* Products Grid & Slider Layout */
+/* ========================= */
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* حل مشكلة السلايدر في الصفحة الرئيسية دون تخريب صفحات الأقسام */
+.best-sellers .products {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* لإخفاء شريط التمرير في متصفح فايرفوكس */
+}
+
+.best-sellers .products::-webkit-scrollbar {
+    display: none; /* لإخفاء شريط التمرير في كروم وسفاري */
+}
+
+/* ========================= */
+/* Product Card */
+/* ========================= */
+.product-card {
+    position: relative;
+    width: 260px;
+    min-width: 260px;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 8px 22px rgba(0,0,0,.08);
+    transition: .35s;
+    padding-bottom: 20px;
+    flex-shrink: 0; /* تمنع انكماش الكروت داخل السلايدر */
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin-top: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: #5C4033;
+}
+
+.brand {
+    color: #8B5E3C;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.description {
+    padding: 0 18px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.price {
+    margin: 18px 0;
+    font-size: 25px;
+    font-weight: bold;
+    color: #6F4E37;
+}
+
+/* ========================= */
+/* Button & Arrows */
+/* ========================= */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #6F4E37;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #8B5E3C;
+}
+
+.arrow {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* ========================= */
+/* Category Glass Tag */
+/* ========================= */
+.glass-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 7px 15px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.35);
+    box-shadow: 0 6px 20px rgba(0,0,0,.12);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #5C4033;
+    z-index: 5;
+}
+
+.glass-tag.men { border-color: rgba(111,78,55,.45); }
+.glass-tag.women { border-color: rgba(200,162,122,.55); }
+
+/* ========================= */
+/* Wishlist */
+/* ========================= */
+.wishlist-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: #222;
+    transition: .3s;
+    z-index: 10;
+}
+
+.wishlist-btn:hover { transform: scale(1.18); }
+.wishlist-btn i { transition: .3s; }
+.wishlist-btn.active i { color: #5C4033; }

@@ -1,89 +1,74 @@
+/* ========================= */
+/* Hero Video Cursor */
+/* ========================= */
 const hero = document.querySelector(".hero");
 const video = document.getElementById("heroVideo");
 const cursor = document.getElementById("videoCursor");
 
-hero.addEventListener("mousemove", (e)=>{
+if (hero && video && cursor) {
+    // جعل المؤشر يتبع الماوس بدقة متناهية مع السكرول
+    hero.addEventListener("mousemove", (e) => {
+        const rect = hero.getBoundingClientRect();
+        cursor.style.left = `${e.clientX - rect.left}px`;
+        cursor.style.top = `${e.clientY - rect.top}px`;
+    });
 
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
-});
+    hero.addEventListener("mouseenter", () => {
+        cursor.style.opacity = "1";
+    });
 
-hero.addEventListener("mouseenter", ()=>{
+    hero.addEventListener("mouseleave", () => {
+        cursor.style.opacity = "0";
+    });
 
-    cursor.style.opacity = "1";
+    hero.addEventListener("click", () => {
+        if (video.paused) {
+            video.play();
+            cursor.textContent = "PAUSE";
+        } else {
+            video.pause();
+            cursor.textContent = "PLAY";
+        }
+    });
+}
 
-});
-
-hero.addEventListener("mouseleave", ()=>{
-
-    cursor.style.opacity = "0";
-
-});
-
-hero.addEventListener("click", ()=>{
-
-    if(video.paused){
-
-        video.play();
-        cursor.innerHTML = "PAUSE";
-
-    }else{
-
-        video.pause();
-        cursor.innerHTML = "PLAY";
-
-    }
-
-});
-const products = document.querySelector(".products");
+/* ========================= */
+/* Best Sellers Slider */
+/* ========================= */
+const productsContainer = document.querySelector(".best-sellers .products");
 const leftBtn = document.querySelector(".left");
 const rightBtn = document.querySelector(".right");
 
-rightBtn.addEventListener("click", () => {
-
-    products.scrollBy({
-
-        left: 300,
-
-        behavior: "smooth"
-
+if (productsContainer && leftBtn && rightBtn) {
+    rightBtn.addEventListener("click", () => {
+        productsContainer.scrollBy({
+            left: 300,
+            behavior: "smooth"
+        });
     });
 
-});
-
-leftBtn.addEventListener("click", () => {
-
-    products.scrollBy({
-
-        left: -300,
-
-        behavior: "smooth"
-
+    leftBtn.addEventListener("click", () => {
+        productsContainer.scrollBy({
+            left: -300,
+            behavior: "smooth"
+        });
     });
+}
 
-});
+/* ========================= */
+/* Wishlist Toggle */
+/* ========================= */
 const wishlistButtons = document.querySelectorAll(".wishlist-btn");
 
 wishlistButtons.forEach(button => {
-
     button.addEventListener("click", () => {
-
         const icon = button.querySelector("i");
-
         button.classList.toggle("active");
 
-        if(button.classList.contains("active")){
-
-            icon.classList.remove("fa-regular");
-            icon.classList.add("fa-solid");
-
-        }else{
-
-            icon.classList.remove("fa-solid");
-            icon.classList.add("fa-regular");
-
+        if (button.classList.contains("active")) {
+            icon.classList.replace("fa-regular", "fa-solid");
+        } else {
+            icon.classList.replace("fa-solid", "fa-regular");
         }
-
     });
-
 });

@@ -1,208 +1,140 @@
 /* ========================= */
-/* Reset */
+/* Reset & Global */
 /* ========================= */
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ========================= */
-/* Body */
-/* ========================= */
-
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background-color: #f8f3ed;
 }
 
-/* ========================= */
-/* Navbar */
-/* ========================= */
+main {
+    min-height: 100vh;
+}
 
-.navbar{
+/* ========================= */
+/* Navbar Style */
+/* ========================= */
+.navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background-color: #6F4E37;
+    background: #6F4E37;
 }
 
-.logo{
+.logo, .logo a {
     display: flex;
     align-items: center;
 }
 
-.logo a{
-    display: flex;
-    align-items: center;
-}
-
-.logo img{
+.logo img {
     width: 120px;
     height: auto;
     object-fit: contain;
     display: block;
-    transition: all 0.3s ease;
+    transition: .3s;
 }
 
-.logo img:hover{
+.logo img:hover {
     transform: scale(1.05);
 }
 
-.nav-links{
+.nav-links {
     display: flex;
-    list-style: none;
+    align-items: center;
     gap: 35px;
+    list-style: none;
 }
 
-.nav-links a{
+.nav-links a {
     text-decoration: none;
     color: white;
     font-size: 17px;
-    transition: 0.3s;
+    transition: .3s;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
     color: #D8C3A5;
 }
 
-.nav-icons{
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #6F4E37;
+    width: 180px;
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity .3s, visibility .3s, transform .3s;
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background: #8B5E3C;
+}
+
+/* Icons & Buttons */
+.nav-icons {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
-.nav-icons a{
+.nav-icons a {
     text-decoration: none;
     color: white;
     font-size: 16px;
-    transition: 0.3s;
+    transition: .3s;
 }
 
-.nav-icons a:hover{
+.nav-icons a:hover {
     color: #D8C3A5;
 }
 
+.register-btn {
+    padding: 10px 22px;
+    border: 1px solid #D8C3A5;
+    border-radius: 30px;
+}
+
+.register-btn:hover {
+    background: #D8C3A5;
+    color: #6F4E37 !important;
+}
+
 /* ========================= */
-/* Fragrance Notes */
+/* Hero Section */
 /* ========================= */
-
-.notes-section{
-    padding: 80px 60px;
-    background-color: #f8f3ed;
-}
-
-.notes-section h2{
-    font-family:'Cormorant Garamond', serif;
-    text-align: center;
-    font-size: 36px;
-    color: #5C4033;
-    margin-bottom: 50px;
-}
-
-.notes-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-    flex-wrap: wrap;
-}
-
-/* تأثير التعتيم على جميع الصور */
-.notes-container:hover .note-card{
-    opacity: 0.35;
-}
-
-.note-card{
-    text-align: center;
-    transition: all 0.4s ease;
-}
-
-/* الصورة الموجودة عليها الماوس */
-.notes-container .note-card:hover{
-    opacity: 1;
-    transform: scale(1.08);
-}
-
-.note-card a{
-    text-decoration: none;
-}
-
-.note-card img{
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #8B5E3C;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
-/* الصورة المكبرة */
-.note-card:hover img{
-    border-color: #C8A27A;
-    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-}
-
-.note-card h3{
-    margin-top: 15px;
-    font-size: 20px;
-    color: #5C4033;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.note-card:hover h3{
-    color: #8B5E3C;
-}
-.hero{
-    width: 100%;
-    height: 650px;
-    background-color: #d9d9d9;
-}
-/* ========================= */
-/* Hero Video */
-/* ========================= */
-
-.hero{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.hero video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 2;
-}
-
-.hero-content h1{
-    font-size: 60px;
-    margin-bottom: 15px;
-}
-
-.hero-content p{
-    font-size: 22px;
-}
-/* ========================= */
-/* Hero */
-/* ========================= */
-
-.hero{
+.hero {
     position: relative;
     width: 100%;
     height: 80vh;
@@ -210,668 +142,825 @@ body{
     cursor: none;
 }
 
-.hero video{
+.hero video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* الدائرة */
-
-#videoCursor{
-    position: absolute;
+#videoCursor {
+    position: fixed;
     width: 110px;
     height: 110px;
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     background: rgba(255,255,255,0.15);
     backdrop-filter: blur(12px);
-
+    -webkit-backdrop-filter: blur(12px);
     color: white;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 2px;
-
     pointer-events: none;
-
     opacity: 0;
-
     transform: translate(-50%, -50%);
-
-    transition:
-            opacity .25s,
-            transform .15s;
+    transition: opacity .25s, transform .15s;
+    z-index: 10;
 }
+
 /* ========================= */
-/* Footer */
+/* Products Pages & Best Sellers Layout */
 /* ========================= */
-
-.footer{
-    background-color:#6F4E37;
-    color:white;
-    padding:60px 80px 20px;
+.products-page {
+    padding: 80px 60px;
+    background: #fffaf5;
+    min-height: 100vh;
 }
 
-.footer-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    flex-wrap:wrap;
-    gap:50px;
+.best-sellers {
+    padding: 80px 60px;
+    background: #fffaf5;
 }
 
-.footer-about,
-.footer-team,
-.footer-contact{
-    flex:1;
-    min-width:250px;
+.page-title, .best-sellers h2 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    color: #5C4033;
+    margin-bottom: 50px;
 }
 
-.footer h3{
-    margin-bottom:18px;
-    font-size:24px;
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
 }
 
-.footer-about a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-.footer-about a:hover{
-    color:#D8C3A5;
+/* تعديل خاص بصفحة السلايدر لتمرير المنتجات أفقياً */
+.best-sellers .products {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
-.footer p{
-    color:#f2e9df;
-    line-height:1.8;
+.best-sellers .products::-webkit-scrollbar {
+    display: none;
 }
 
-.social-icons{
-    display:flex;
-    gap:18px;
-    margin-top:20px;
-}
-
-.social-icons img{
-    width:32px;
-    height:32px;
-    transition:.3s;
-}
-
-.social-icons img:hover{
-    transform:scale(1.15);
-}
-
-.footer hr{
-    margin:40px 0 20px;
-    border:none;
-    height:1px;
-    background:rgba(255,255,255,.25);
-}
-
-.copyright{
-    text-align:center;
-    color:#f2e9df;
-    font-size:14px;
-}
 /* ========================= */
-/* Footer */
+/* Product Card Component */
 /* ========================= */
-
-.footer{
-    background:#6F4E37;
-    padding:70px 80px 25px;
-    color:white;
+.product-card {
+    position: relative;
+    width: 260px;
+    min-width: 260px;
+    max-width: 260px;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 8px 22px rgba(0,0,0,.08);
+    transition: .35s;
+    padding-bottom: 20px;
+    flex-shrink: 0;
 }
 
-.footer-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:60px;
-    flex-wrap:wrap;
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
 }
 
-.footer-follow,
-.footer-contact{
-    flex:1;
-    min-width:220px;
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
 }
 
-.footer-follow h3,
-.footer-contact h3{
-    margin-bottom:20px;
-    font-size:24px;
-    color:white;
+.product-card h3 {
+    margin-top: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: #5C4033;
 }
 
-.footer-follow a,
-.footer-contact a{
-    display:block;
-    text-decoration:none;
-    color:#F4EBDD;
-    margin-bottom:14px;
-    transition:.3s;
+.brand {
+    color: #8B5E3C;
+    font-weight: 600;
+    margin: 8px 0;
 }
 
-.footer-follow a:hover,
-.footer-contact a:hover{
-    color:#D8C3A5;
-    padding-left:6px;
+.description {
+    padding: 0 18px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
 }
 
-.footer-contact p{
-    color:#F4EBDD;
-    margin-bottom:14px;
+.price {
+    margin: 18px 0;
+    font-size: 25px;
+    font-weight: bold;
+    color: #6F4E37;
 }
 
-.footer-logo{
-    flex:1;
-    text-align:center;
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #6F4E37;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: .3s;
 }
 
-.footer-logo img{
-    width:110px;
-    margin-bottom:18px;
+.btn:hover {
+    background: #8B5E3C;
 }
 
-.footer-title{
-    font-size:26px;
-    font-weight:600;
-    color:white;
-    margin-bottom:8px;
-    letter-spacing:1px;
+/* Arrows with user-select fix */
+.arrow {
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: #6F4E37;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
-.footer-subtitle{
-    color:#D8C3A5;
-    font-size:17px;
-    letter-spacing:1px;
+.arrow:hover {
+    background: #8B5E3C;
+    transform: scale(1.1);
 }
 
-.footer hr{
-    margin:45px 0 20px;
-    border:none;
-    height:1px;
-    background:rgba(255,255,255,.25);
-}
-
-.copyright{
-    text-align:center;
-    color:#F4EBDD;
-    font-size:14px;
-}
-.footer{
-    border-top:3px solid #D8C3A5;
-}/* ========================= */
-/* Footer */
 /* ========================= */
-
-.footer{
-
-    background:#6F4E37;
-    color:white;
-
-    padding:55px 50px 20px;
-
-    border-top:2px solid #C8A27A;
-}
-
-.footer-container{
-    max-width:1200px;
-    margin:auto;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    flex-wrap:nowrap;
-}
-
-.footer-follow{
-    flex:1;
-    text-align:left;
-}
-
-.footer-logo{
-    flex:1;
-    text-align:center;
-}
-
-.footer-contact{
-    flex:1;
-    text-align:right;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-end;
-}
-
-/* ---------- Headings ---------- */
-
-.footer h3{
-
-    font-family:'Cormorant Garamond', serif;
-
-    font-size:32px;
-
-    font-weight:600;
-
-    margin-bottom:18px;
-
-    letter-spacing:1px;
-}
-
-/* ---------- Follow ---------- */
-
-.footer-follow a{
-
-    display:block;
-
-    color:#F4EBDD;
-
-    text-decoration:none;
-
-    margin-bottom:12px;
-
-    font-size:15px;
-
-    transition:.3s;
-}
-
-.footer-follow a:hover{
-
-    color:#D8C3A5;
-
-    transform:translateX(5px);
-}
-
-/* ---------- Logo ---------- */
-
-.footer-logo{
-
-    text-align:center;
-}
-
-.footer-logo img{
-
-    width:120px;
-
-    margin-bottom:15px;
-}
-
-.footer-title{
-
-    font-family:'Cormorant Garamond', serif;
-
-    font-size:34px;
-
-    font-weight:600;
-
-    margin-bottom:6px;
-
-    letter-spacing:1px;
-}
-
-.footer-subtitle{
-
-    color:#D8C3A5;
-
-    font-size:16px;
-
-    font-style:italic;
-
-    letter-spacing:.8px;
-}
-
-/* ---------- Contact ---------- */
-
-.footer-contact p,
-.footer-contact a{
-
-    color:#F4EBDD;
-
-    text-decoration:none;
-
-    display:block;
-
-    margin-bottom:12px;
-
-    font-size:15px;
-
-    transition:.3s;
-}
-
-.footer-contact a:hover{
-
-    color:#D8C3A5;
-}
-
-/* ---------- Line ---------- */
-
-.footer hr{
-
-    width:80%;
-
-    margin:40px auto 18px;
-
-    border:none;
-
-    height:1px;
-
-    background:rgba(255,255,255,.25);
-}
-
-/* ---------- Copyright ---------- */
-
-.copyright{
-
-    text-align:center;
-
-    color:#E8DCCF;
-
-    font-size:14px;
-
-    letter-spacing:1px;
-}
+/* Category Glass Tags */
 /* ========================= */
-/* Best Sellers */
-/* ========================= */
-
-.best-sellers{
-
-    padding:80px 60px;
-    background:#fffaf5;
-}
-
-.best-sellers h2{
-
-    text-align:center;
-
-    font-family:'Cormorant Garamond', serif;
-
-    font-size:45px;
-
-    color:#5C4033;
-
-    margin-bottom:45px;
-}
-
-/* Slider */
-
-.slider{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:18px;
-}
-
-/* Products */
-
-.products{
-
-    display:flex;
-
-    gap:30px;
-
-    overflow-x:auto;
-
-    scroll-behavior:smooth;
-
-    scrollbar-width:none;
-}
-
-.products::-webkit-scrollbar{
-
-    display:none;
-}
-
-/* Cards */
-
-.product-card{
-
-    min-width:260px;
-
-    background:white;
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    text-align:center;
-
-    box-shadow:0 8px 22px rgba(0,0,0,.08);
-
-    transition:.35s;
-
-    padding-bottom:20px;
-}
-
-.product-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-}
-
-.product-card img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-    display:block;
-}
-
-.product-card h3{
-
-    margin-top:18px;
-
-    font-family:'Cormorant Garamond', serif;
-
-    font-size:28px;
-
-    color:#5C4033;
-}
-
-.brand{
-
-    color:#8B5E3C;
-
-    font-weight:600;
-
-    margin:8px 0;
-}
-
-.description{
-
-    padding:0 18px;
-
-    font-size:14px;
-
-    color:#666;
-
-    line-height:1.6;
-}
-
-.price{
-
-    margin:18px 0;
-
-    font-size:25px;
-
-    font-weight:bold;
-
-    color:#6F4E37;
-}
-
-.btn{
-
-    display:inline-block;
-
-    padding:12px 28px;
-
-    background:#6F4E37;
-
-    color:white;
-
-    text-decoration:none;
-
-    border-radius:30px;
-
-    transition:.3s;
-}
-
-.btn:hover{
-
-    background:#8B5E3C;
-}
-
-/* Arrows */
-
-.arrow{
-
-    width:55px;
-
-    height:55px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#6F4E37;
-
-    color:white;
-
-    font-size:28px;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-.arrow:hover{
-
-    background:#8B5E3C;
-
-    transform:scale(1.1);
-}
-.product-card{
-    position:relative;
-    overflow:hidden;
-
-    width:260px;
-    min-width:260px;
-    max-width:260px;
-
-    background:white;
-    border-radius:18px;
-    text-align:center;
-
-    box-shadow:0 8px 22px rgba(0,0,0,.08);
-    transition:.35s;
-
-    flex-shrink:0;
-}
-
-.glass-tag{
-
+.glass-tag {
     position: absolute;
-    top:15px;
-    left:15px;
-
-    padding:7px 15px;
-
-    border-radius:25px;
-
-    background:rgba(255,255,255,0.18);
-
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-
-    border:1px solid rgba(255,255,255,0.35);
-
-    box-shadow:0 6px 20px rgba(0,0,0,0.12);
-
-    font-family:'Poppins', sans-serif;
-    font-size:11px;
-    font-weight:500;
-    letter-spacing:1px;
-    text-transform:uppercase;
-
-    color:#fff;
-
-    z-index:5;
+    top: 15px;
+    left: 15px;
+    padding: 7px 15px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.35);
+    box-shadow: 0 6px 20px rgba(0,0,0,.12);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #5C4033;
+    z-index: 5;
+    transition: .3s;
 }
 
-.glass-tag:hover{
-    background:rgba(255,255,255,0.25);
-}
-.glass-tag.men{
-    color:#5C4033;
-    text-shadow:0 1px 2px rgba(255,255,255,.35);
-    border-color:rgba(111,78,55,.45);
+.glass-tag:hover {
+    background: rgba(255,255,255,.25);
 }
 
-.glass-tag.women{
-    color:#5C4033;
-    text-shadow:0 1px 2px rgba(255,255,255,.35);
-    border-color:rgba(200,162,122,.55);
+.glass-tag.men {
+    border-color: rgba(111,78,55,.45);
 }
 
-.glass-tag.unisex{
-    color:#5C4033;
-    text-shadow:0 1px 2px rgba(255,255,255,.35);
-    border-color:rgba(255,255,255,.5);
+.glass-tag.women {
+    border-color: rgba(200,162,122,.55);
 }
-.wishlist-btn{
+
+.glass-tag.unisex {
+    border-color: rgba(255,255,255,.5);
+}
+
+/* Wishlist Heart */
+.wishlist-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: #222;
+    transition: .3s;
+    z-index: 10;
+}
+
+.wishlist-btn:hover {
+    transform: scale(1.18);
+}
+
+.wishlist-btn.active i {
+    color: #5C4033;
+}
+
+/* ========================= */
+/* Fragrance Notes Section */
+/* ========================= */
+.notes-section {
+    padding: 80px 60px;
+    background-color: #f8f3ed;
+}
+
+.notes-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    font-size: 36px;
+    color: #5C4033;
+    margin-bottom: 50px;
+}
+
+.notes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.notes-container:hover .note-card {
+    opacity: .35;
+}
+
+.note-card {
+    text-align: center;
+    transition: .4s;
+}
+
+.note-card:hover {
+    opacity: 1 !important;
+    transform: scale(1.08);
+}
+
+.note-card a {
+    text-decoration: none;
+}
+
+.note-card img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #8B5E3C;
+    cursor: pointer;
+    transition: .4s;
+    box-shadow: 0 6px 18px rgba(0,0,0,.15);
+}
+
+.note-card:hover img {
+    border-color: #C8A27A;
+    box-shadow: 0 12px 25px rgba(0,0,0,.25);
+}
+
+.note-card h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #5C4033;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.note-card:hover h3 {
+    color: #8B5E3C;
+}
+
+/* ========================= */
+/* Footer Style */
+/* ========================= */
+.footer {
+    background: #6F4E37;
+    color: white;
+    padding: 55px 50px 20px;
+    border-top: 3px solid #D8C3A5;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* يضمن موازنة الأقسام الثلاثة على خط أفقي واحد */
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-follow, .footer-logo, .footer-contact {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-follow {
+    text-align: left;
+}
+
+/* حل مشكلة اللوجو والاسم: محاذاة عمودية وتوسط كامل في كل الصفحات */
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* يوسط اللوجو والنصوص أفقياً */
+    justify-content: center;
+    text-align: center;      /* يضمن سنترة النصوص */
+}
+
+.footer-logo img {
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 12px;     /* مسافة متناسقة بين اللوجو والاسم */
+}
+
+.footer-contact {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+/* توحيد الألوان الفاتحة لعناوين الفوتر والبراند */
+.footer-title {
+    margin-bottom: 6px !important;
+    color: #D8C3A5; /* اللون الفاتح الموحد للبراند */
+}
+
+.footer-subtitle {
+    color: #F4EBDD; /* جعل جملة Luxury Fragrance Experience بلون فاتح رائع */
+    font-size: 16px;
+    font-style: italic;
+}
+
+.footer-follow h3 {
+    color: #D8C3A5; /* جعل عنوان الروابط لون فاتح متناسق */
+}
+
+.footer-contact h3 {
+    color: #D8C3A5; /* جعل عنوان التواصل لون فاتح متناسق */
+}
+
+.footer a {
+    display: block;
+    color: #F4EBDD;
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-size: 15px;
+    transition: transform .3s ease, color .3s ease;
+}
+
+/* تأثير الـ Hover على الروابط جهة اليسار ومن ضمنها Meet the Team ليتحرك كباقي السوشيال ميديا */
+.footer-follow a:hover {
+    color: #D8C3A5;
+    transform: translateX(5px);
+}
+
+/* إلغاء تأثير الـ Hover تماماً عن روابط الإيميل والتواصل وتثبيتها */
+.footer-contact a {
+    cursor: default; /* إلغاء مؤشر الضغط */
+    transition: none; /* إلغاء أي حركة */
+}
+
+.footer-contact a:hover {
+    color: #F4EBDD; /* الحفاظ على نفس اللون الفاتح الأصلي دون تغيير */
+    transform: none; /* إلغاء الحركة الجانبية */
+}
+
+.footer-contact p {
+    color: #F4EBDD;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.footer hr {
+    width: 80%;
+    margin: 40px auto 18px;
+    border: none;
+    height: 1px;
+    background: rgba(255,255,255,.25);
+}
+
+.copyright {
+    text-align: center;
+    color: #E8DCCF;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* ========================================== */
+/* About Page Styling */
+/* ========================================== */
+
+/* 1. Hero Section */
+.about-hero {
+    height: 85vh;
+    background: url("../images/about/about-bg.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.about-overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.about-overlay h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero-subtitle {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    color: #F4EBDD;
+}
+
+.hero-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #e5e5e5;
+    font-weight: 300;
+}
+
+/* 2. Our Story Section */
+.our-story-section {
+    padding: 90px 20px;
+    background-color: #fffaf5;
+    text-align: center;
+}
+
+.container-story {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.our-story-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    color: #5C4033;
+    margin-bottom: 25px;
     position: relative;
 }
 
-/* ========================= */
-/* Wishlist Heart */
-/* ========================= */
-
-.wishlist-btn{
-    position:absolute;
-    top:15px;
-    right:15px;
-
-    background:none;
-    border:none;
-    outline:none;
-
-    cursor:pointer;
-
-    font-size:22px;
-
-    color:#222;
-
-    transition:.3s;
-
-    z-index:10;
+.our-story-section p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #666;
 }
 
-.wishlist-btn:hover{
-    transform:scale(1.18);
+/* ========================================== */
+/* About Page Styling */
+/* ========================================== */
+
+/* 1. Hero Section */
+.about-hero {
+    height: 85vh;
+    background: url("../images/about/about-bg.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.wishlist-btn i{
-    transition:.3s;
+.about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
-.wishlist-btn.active i{
-    color:#5C4033;
+.about-overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 0 20px;
 }
 
-.wishlist-btn.active i{
+.about-overlay h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
 
-    color:#5C4033;
+.hero-subtitle {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    color: #F4EBDD;
+}
 
+.hero-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #e5e5e5;
+    font-weight: 300;
+}
+
+/* 2. Our Story Section */
+.our-story-section {
+    padding: 90px 20px;
+    background-color: #fffaf5;
+    text-align: center;
+}
+
+.container-story {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.our-story-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    color: #5C4033;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.our-story-section p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #666;
+}
+
+/* 3. Meet the Designers (تأثير حركة الفوتر المحدث) */
+.meet-designers-section {
+    padding: 90px 20px;
+    background-color: #f8f3ed;
+    text-align: center;
+}
+
+.container-team {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.team-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    letter-spacing: 2px;
+    color: #5C4033;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 60px;
+    border-bottom: 2px solid #D8C3A5;
+    padding-bottom: 5px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    background: transparent;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* حركة الكرت بالكامل لليمين خفيفاً مثل ستايل الفوتر */
+.team-card:hover {
+    transform: translateX(5px);
+}
+
+.image-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(111, 78, 55, 0.12);
+    border: 4px solid white;
+    transition: box-shadow 0.3s ease;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(111, 78, 55, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: #6F4E37;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    background: #6F4E37;
+    color: white;
+    transform: scale(1.1);
+}
+
+.team-card:hover .image-container {
+    box-shadow: 0 15px 35px rgba(111, 78, 55, 0.2);
+}
+
+.team-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.team-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: #5C4033;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.team-card .role {
+    font-size: 15px;
+    color: #8B5E3C;
+    font-weight: 500;
+}
+
+/* 4. Why Arome? Section (ترتيب وتنسيق احترافي متناسق) */
+.why-arome-section {
+    padding: 90px 20px;
+    background-color: #fffaf5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-box {
+    background: white;
+    border: 1px solid #E8DCCF;
+    border-radius: 18px;
+    padding: 50px 60px;
+    max-width: 750px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(111, 78, 55, 0.05);
+}
+
+.why-box h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    color: #5C4033;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.feature-item {
+    font-size: 16px;
+    color: #5C4033;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* سنترة العناصر لترتيب أفضل */
+    gap: 12px;
+    background: #fbf8f5;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(216, 195, 165, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-3px);
+    background: #f5ede4;
+}
+
+.feature-item i {
+    color: #8B5E3C;
+    font-size: 15px;
+}
+
+/* 5. Quote Section (إضافة لمسة جمالية وفراغات مريحة العين) */
+.quote-section {
+    padding: 100px 20px;
+    background-color: #f8f3ed;
+    text-align: center;
+    border-bottom: 1px solid rgba(216, 195, 165, 0.2);
+}
+
+.quote-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.quote-icon {
+    font-size: 36px;
+    color: #D8C3A5;
+    margin-bottom: 20px;
+}
+
+.quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 28px;
+    color: #6F4E37;
+    line-height: 1.6;
+}
+
+/* التجاوب الذكي والشاشات الصغيرة */
+@media (max-width: 768px) {
+    .about-overlay h1 { font-size: 48px; }
+    .hero-subtitle { font-size: 22px; }
+    .team-grid { gap: 50px; }
+    .why-box { padding: 35px 25px; }
+    .features-grid { grid-template-columns: 1fr; gap: 15px; }
+    .quote-text { font-size: 24px; }
+}
+
+/* تنسيق رابط Meet the Team المحدث في المنتصف */
+.footer-logo .meet-team-link {
+    display: inline-block !important;
+    color: #F4EBDD !important;        /* اللون الفاتح الموحد للمنتصف */
+    text-decoration: none !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    margin-top: 15px !important;
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease !important;
+}
+
+/* تأثير الهوفر الجانبي الإنسيابي (مثل انستغرام وتيك توك) */
+.footer-logo .meet-team-link:hover {
+    color: #D8C3A5 !important;        /* اللون البيج الفاتح الفخم عند الهوفر */
+    transform: translateX(5px) !important; /* يتحرك بلطف لليمين */
 }
