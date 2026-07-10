@@ -5,15 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Women | Arome</title>
 
-    <!-- CSS & Fonts -->
+    <!-- CSS & Fonts (الأصلية تبعتك بدون تغيير) -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600&family=Cormorant+Garamond:wght=400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- إضافة التعديلات المطلوبة فقط كمكملات بدون تخريب حجم الكروت أو النافبار والفوتر -->
+    <style>
+
+        /* ========================= */
+        /* Background */
+        /* ========================= */
+
+        html,
+        body{
+            min-height:100%;
+        }
+
+        body{
+            position:relative;
+            background:transparent !important;
+        }
+
+        body::before{
+            content:"";
+            position:fixed;
+            inset:0;
+
+            background-image:
+                    linear-gradient(rgba(248,243,237,.55),rgba(248,243,237,.55)),
+                    url("images/products/home.jpeg");
+
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+
+            z-index:-1;
+        }
+
+        /* ========================= */
+        /* Glass Cards */
+        /* ========================= */
+
+        .product-card{
+
+            background:rgba(255,255,255,.35) !important;
+
+            backdrop-filter:blur(14px) !important;
+            -webkit-backdrop-filter:blur(14px) !important;
+
+            border:1px solid rgba(255,255,255,.45) !important;
+
+            box-shadow:0 10px 25px rgba(0,0,0,.15) !important;
+        }
+
+        .product-card:hover{
+
+            background:rgba(255,255,255,.5) !important;
+
+            box-shadow:0 15px 35px rgba(0,0,0,.2) !important;
+        }
+
+        .product-card img{
+            opacity:.92;
+        }
+
+    </style>
 </head>
 <body>
 
+<!-- النافبار الأصلي شغال ومكانه ثابت -->
 <div id="navbar"></div>
 
 <main class="products-page">
@@ -46,9 +111,65 @@
             <p class="price">$170</p>
             <a href="coco.html" class="btn">View Details</a>
         </div>
+
+        <div class="product-card">
+            <span class="glass-tag women">Women</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="images/products/pdadaa.jpeg" alt="Coco Chanel">
+            <h3>PradaMilano</h3>
+            <p class="brand">PRADA</p>
+            <p class="description">Refined floral with a luxurious touch.</p>
+            <p class="price">$125</p>
+            <a href="PRADA.html" class="btn">View Details</a>
+        </div>
+        <div class="product-card">
+            <span class="glass-tag women">Women</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="images/products/gucci.jpeg" alt="Coco Chanel">
+            <h3>Gucci Flora Gorgeous Gardenia</h3>
+            <p class="brand">GUCCI</p>
+            <p class="description">Soft feminine floral fragrance.</p>
+            <p class="price">$170</p>
+            <a href="gucci.html" class="btn">View Details</a>
+        </div>
+        <div class="product-card">
+            <span class="glass-tag women">Women</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="images/products/miss dior.jpeg" alt="Coco Chanel">
+            <h3>Miss Dior</h3>
+            <p class="brand">DIOR</p>
+            <p class="description">Romantic elegant floral fragrance.</p>
+            <p class="price">$200</p>
+            <a href="miss dior.html" class="btn">View Details</a>
+        </div>
+
+        <div class="product-card">
+            <span class="glass-tag women">Women</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="images/products/goodgirl.jpg" alt="Coco Chanel">
+            <h3>Good Girl</h3>
+            <br><br>
+
+            <!--            <p class="brand">DIOR</p>-->
+            <p class="description">Confident seductive signature scent.</p>
+            <p class="price">$150</p>
+            <a href="good girl.html" class="btn">View Details</a>
+        </div>
+
     </div>
+
+
 </main>
 
+<!-- الفوتر الأصلي شغال ومكانه ثابت -->
 <div id="footer"></div>
 
 <script src="js/components.js"></script>

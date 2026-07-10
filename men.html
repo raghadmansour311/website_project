@@ -7,29 +7,94 @@
 
     <!-- CSS & Fonts -->
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600&family=Cormorant+Garamond:wght=400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Background + Glass Cards -->
+    <style>
+
+        body{
+            position:relative;
+            background:transparent !important;
+        }
+
+        body::before{
+            content:"";
+            position:fixed;
+            inset:0;
+
+            background:
+                    linear-gradient(rgba(248,243,237,.45), rgba(248,243,237,.45)),
+                    url("images/products/home.jpeg");
+
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+
+            z-index:-1;
+        }
+
+        .products-page{
+            background:transparent !important;
+        }
+
+        .product-card{
+            background:rgba(255,255,255,.35) !important;
+            backdrop-filter:blur(12px);
+            -webkit-backdrop-filter:blur(12px);
+
+            border:1px solid rgba(255,255,255,.45);
+
+            box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+            transition:.35s;
+        }
+
+        .product-card:hover{
+            background:rgba(255,255,255,.55) !important;
+            transform:translateY(-8px);
+            box-shadow:0 18px 35px rgba(0,0,0,.20);
+        }
+
+    </style>
+
 </head>
+
 <body>
 
 <div id="navbar"></div>
 
 <main class="products-page">
+
     <h1 class="page-title">Men's Collection</h1>
+
     <div class="products">
+
         <!-- Dior Sauvage -->
         <div class="product-card">
             <span class="glass-tag men">Men</span>
             <button class="wishlist-btn" data-tooltip="Add to Wishlist">
                 <i class="fa-regular fa-heart"></i>
             </button>
+
             <img src="images/products/perfume1.jpeg" alt="Dior Sauvage">
+
             <h3>Dior Sauvage</h3>
+
             <p class="brand">Dior</p>
-            <p class="description">Fresh woody fragrance with bergamot notes.</p>
+
+            <p class="description">
+                Fresh woody fragrance with bergamot notes.
+            </p>
+
             <p class="price">$120</p>
+
             <a href="sauvage.html" class="btn">View Details</a>
         </div>
 
@@ -39,19 +104,51 @@
             <button class="wishlist-btn" data-tooltip="Add to Wishlist">
                 <i class="fa-regular fa-heart"></i>
             </button>
+
             <img src="images/products/perfume3.jpeg" alt="Creed Aventus">
+
             <h3>Creed Aventus</h3>
+
             <p class="brand">Creed</p>
-            <p class="description">Luxury fruity woody fragrance.</p>
+
+            <p class="description">
+                Luxury fruity woody fragrance.
+            </p>
+
             <p class="price">$350</p>
+
             <a href="aventus.html" class="btn">View Details</a>
         </div>
+        <div class="product-card">
+            <span class="glass-tag men">Men</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <img src="images/products/onemillion.jpg" alt="Creed Aventus">
+
+            <h3>One Million</h3>
+            <br><br>
+
+
+            <!--            <p class="brand">Creed</p>-->
+
+            <p class="description">
+                Bold woody spicy fragrance            </p>
+
+            <p class="price">$250</p>
+
+            <a href="aventus.html" class="btn">View Details</a>
+        </div>
+
     </div>
+
 </main>
 
 <div id="footer"></div>
 
 <script src="js/components.js"></script>
 <script src="js/script.js"></script>
+
 </body>
 </html>
