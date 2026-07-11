@@ -2,9 +2,203 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unisex | Arome</title>
+
+    <!-- CSS & Fonts -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Background + Glass Cards -->
+    <style>
+
+        body{
+            position:relative;
+            background:transparent !important;
+        }
+
+        body::before{
+            content:"";
+            position:fixed;
+            inset:0;
+
+            background:
+                    linear-gradient(rgba(248,243,237,.45), rgba(248,243,237,.45)),
+                    url("images/products/home.jpeg");
+
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+
+            z-index:-1;
+        }
+
+        .products-page{
+            background:transparent !important;
+        }
+
+        .product-card{
+            background:rgba(255,255,255,.35) !important;
+            backdrop-filter:blur(12px);
+            -webkit-backdrop-filter:blur(12px);
+
+            border:1px solid rgba(255,255,255,.45);
+
+            box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+            transition:.35s;
+        }
+
+        .product-card:hover{
+            background:rgba(255,255,255,.55) !important;
+            transform:translateY(-8px);
+            box-shadow:0 18px 35px rgba(0,0,0,.20);
+        }
+
+    </style>
+
 </head>
+
 <body>
+
+<div id="navbar"></div>
+
+<main class="products-page">
+
+    <h1 class="page-title">Unisex Collection</h1>
+
+    <div class="products">
+
+        <!-- Montale Black Musk -->
+        <div class="product-card">
+            <span class="glass-tag men">UNISEX</span>
+
+            <button class="wishlist-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/unisex1.jpeg" alt=" Black Musk">
+
+                <a href=" Black Musk.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+
+            <h3> Black Musk</h3>
+
+            <p class="brand">Montale</p>
+
+            <p class="description">
+                Intense black musk fragrance            </p>
+
+            <p class="price">$120</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+
+        <!-- CK One -->
+        <div class="product-card">
+            <span class="glass-tag men">UNISEX</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/unisex2.jpeg" alt="ck one">
+
+                <a href="ck one.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+            <h3>CK One</h3>
+
+            <p class="brand">Calvin Klein</p>
+
+            <p class="description">
+                Fresh citrus lemon fragrance            </p>
+
+            <p class="price">$50</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+        <div class="product-card">
+            <span class="glass-tag men">UNISEX</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/unisex3.jpeg" alt="One Million">
+
+                <a href="Dubai Effect.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+            <h3>Dubai Effect</h3>
+            <p class="brand">Oud Elixir</p>
+            <p class="description">
+                Warm tobacco amber fragrance
+            </p>
+
+            <p class="price">$55</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+
+
+
+        <div class="product-card">
+            <span class="glass-tag men">UNISEX</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/unisex4.jpeg" alt="light blue">
+
+                <a href="REEF 33.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+            <h3>REEF 33</h3>
+
+            <p class="brand">Reef</p>
+
+            <p class="description">
+                Warm fruity woody fragrance</p>
+
+            <p class="price">$90</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+
+    </div>
+</main>
+
+<div id="footer"></div>
+
+<script src="js/components.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

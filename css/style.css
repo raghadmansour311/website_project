@@ -277,19 +277,7 @@ main {
     color: #6F4E37;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #6F4E37;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: .3s;
-}
 
-.btn:hover {
-    background: #8B5E3C;
-}
 
 /* Arrows with user-select fix */
 .arrow {
@@ -443,6 +431,116 @@ main {
 
 .note-card:hover h3 {
     color: #8B5E3C;
+}
+/* ========================= */
+/* Product Image Hover */
+/* ========================= */
+
+.team-card .image-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(111, 78, 55, 0.12);
+    border: 4px solid white;
+    transition: box-shadow .3s ease;
+}
+
+.team-card .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.35);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+
+    opacity: 0;
+    transition: .35s ease;
+}
+
+.product-card .image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card .image-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: .35s;
+}
+
+.product-card .details-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.35);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    transition: .35s;
+}
+
+.product-card .image-container:hover img {
+    transform: scale(1.05);
+    opacity: .45;
+}
+
+.product-card .image-container:hover .details-overlay {
+    opacity: 1;
+}
+
+
+
+/* ========================= */
+/* Add To Cart Button */
+/* ========================= */
+
+.cart-btn{
+    width: 80%;
+    height: 42px;
+    margin: 15px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #6F4E37;
+    color: #fff;
+
+    cursor: pointer;
+    transition: .3s;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cart-btn:hover{
+    background: #8B5E3C;
+    transform: translateY(-2px);
 }
 
 /* ========================= */
@@ -647,94 +745,17 @@ main {
     position: relative;
 }
 
-.our-story-section p {
+.our-story-section p
+{
     font-size: 16px;
     line-height: 1.9;
     color: #666;
 }
 
 /* ========================================== */
-/* About Page Styling */
+/* Meet the Team */
 /* ========================================== */
 
-/* 1. Hero Section */
-.about-hero {
-    height: 85vh;
-    background: url("../images/about/about-bg.jpg") center/cover no-repeat;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, .4);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-}
-
-.about-overlay {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: white;
-    max-width: 800px;
-    padding: 0 20px;
-}
-
-.about-overlay h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 64px;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
-.hero-subtitle {
-    font-size: 28px;
-    font-weight: 400;
-    margin-bottom: 25px;
-    line-height: 1.5;
-    color: #F4EBDD;
-}
-
-.hero-text {
-    font-size: 17px;
-    line-height: 1.8;
-    color: #e5e5e5;
-    font-weight: 300;
-}
-
-/* 2. Our Story Section */
-.our-story-section {
-    padding: 90px 20px;
-    background-color: #fffaf5;
-    text-align: center;
-}
-
-.container-story {
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-.our-story-section h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
-    color: #5C4033;
-    margin-bottom: 25px;
-    position: relative;
-}
-
-.our-story-section p {
-    font-size: 16px;
-    line-height: 1.9;
-    color: #666;
-}
-
-/* 3. Meet the Designers (تأثير حركة الفوتر المحدث) */
 .meet-designers-section {
     padding: 90px 20px;
     background-color: #f8f3ed;
@@ -766,32 +787,24 @@ main {
 }
 
 .team-card {
-    background: transparent;
     width: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
 }
 
-/* حركة الكرت بالكامل لليمين خفيفاً مثل ستايل الفوتر */
-.team-card:hover {
-    transform: translateX(5px);
-}
-
-.image-container {
+.team-card .image-container {
     position: relative;
     width: 220px;
     height: 220px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 25px;
-    box-shadow: 0 10px 25px rgba(111, 78, 55, 0.12);
+    box-shadow: 0 10px 25px rgba(111,78,55,.12);
     border: 4px solid white;
-    transition: box-shadow 0.3s ease;
 }
 
-.image-container img {
+.team-card .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -800,12 +813,16 @@ main {
 .image-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(111, 78, 55, 0.45);
+    background: rgba(111,78,55,.45);
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: .3s;
+}
+
+.team-card:hover .image-overlay {
+    opacity: 1;
 }
 
 .social-link {
@@ -817,24 +834,14 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
     text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    font-size: 20px;
+    transition: .3s;
 }
 
 .social-link:hover {
     background: #6F4E37;
     color: white;
-    transform: scale(1.1);
-}
-
-.team-card:hover .image-container {
-    box-shadow: 0 15px 35px rgba(111, 78, 55, 0.2);
-}
-
-.team-card:hover .image-overlay {
-    opacity: 1;
 }
 
 .team-card h3 {
@@ -842,16 +849,16 @@ main {
     font-size: 26px;
     color: #5C4033;
     margin-bottom: 8px;
-    font-weight: 600;
 }
 
 .team-card .role {
-    font-size: 15px;
     color: #8B5E3C;
-    font-weight: 500;
+    font-size: 15px;
 }
+/* ========================================== */
+/* Why Arome */
+/* ========================================== */
 
-/* 4. Why Arome? Section (ترتيب وتنسيق احترافي متناسق) */
 .why-arome-section {
     padding: 90px 20px;
     background-color: #fffaf5;
@@ -868,7 +875,7 @@ main {
     max-width: 750px;
     width: 100%;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(111, 78, 55, 0.05);
+    box-shadow: 0 10px 30px rgba(111,78,55,.05);
 }
 
 .why-box h2 {
@@ -876,51 +883,50 @@ main {
     font-size: 38px;
     color: #5C4033;
     margin-bottom: 40px;
-    letter-spacing: 1px;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 25px;
 }
 
 .feature-item {
-    font-size: 16px;
+    background: #fbf8f5;
+    border: 1px solid rgba(216,195,165,.3);
+    border-radius: 30px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
     color: #5C4033;
     font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* سنترة العناصر لترتيب أفضل */
-    gap: 12px;
-    background: #fbf8f5;
-    padding: 15px 20px;
-    border-radius: 30px;
-    border: 1px solid rgba(216, 195, 165, 0.3);
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: .3s;
 }
 
 .feature-item:hover {
-    transform: translateY(-3px);
     background: #f5ede4;
+    transform: translateY(-3px);
 }
 
 .feature-item i {
     color: #8B5E3C;
-    font-size: 15px;
 }
 
-/* 5. Quote Section (إضافة لمسة جمالية وفراغات مريحة العين) */
+/* ========================================== */
+/* Quote */
+/* ========================================== */
+
 .quote-section {
     padding: 100px 20px;
     background-color: #f8f3ed;
     text-align: center;
-    border-bottom: 1px solid rgba(216, 195, 165, 0.2);
 }
 
 .quote-container {
     max-width: 650px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .quote-icon {
@@ -935,32 +941,4 @@ main {
     font-size: 28px;
     color: #6F4E37;
     line-height: 1.6;
-}
-
-/* التجاوب الذكي والشاشات الصغيرة */
-@media (max-width: 768px) {
-    .about-overlay h1 { font-size: 48px; }
-    .hero-subtitle { font-size: 22px; }
-    .team-grid { gap: 50px; }
-    .why-box { padding: 35px 25px; }
-    .features-grid { grid-template-columns: 1fr; gap: 15px; }
-    .quote-text { font-size: 24px; }
-}
-
-/* تنسيق رابط Meet the Team المحدث في المنتصف */
-.footer-logo .meet-team-link {
-    display: inline-block !important;
-    color: #F4EBDD !important;        /* اللون الفاتح الموحد للمنتصف */
-    text-decoration: none !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    margin-top: 15px !important;
-    text-align: center;
-    transition: transform 0.3s ease, color 0.3s ease !important;
-}
-
-/* تأثير الهوفر الجانبي الإنسيابي (مثل انستغرام وتيك توك) */
-.footer-logo .meet-team-link:hover {
-    color: #D8C3A5 !important;        /* اللون البيج الفاتح الفخم عند الهوفر */
-    transform: translateX(5px) !important; /* يتحرك بلطف لليمين */
 }
