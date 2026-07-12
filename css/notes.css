@@ -1,0 +1,986 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    position:relative;
+    font-family:'Poppins',sans-serif;
+    background:#F7F2EB;
+    color:#333;
+}
+
+/* ==========================
+   WOODY PAGE
+========================== */
+
+body.woody-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+            linear-gradient(rgba(255,255,255,.35),rgba(255,255,255,.35)),
+            url("../images/notes/woody.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    z-index:-2;
+}
+
+/* ==========================
+   ROSE PAGE
+========================== */
+
+body.rose-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+            linear-gradient(rgba(255,245,247,.60),rgba(255,245,247,.60)),
+            url("../images/notes/rose1.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    z-index:-2;
+}
+
+/*==========================
+HERO
+===========================*/
+
+
+.hero h1{
+
+    font-size:80px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    letter-spacing:6px;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+/*==========================
+ABOUT
+===========================*/
+
+.about-note{
+
+    width:90%;
+
+    margin:120px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+.about-text h2{
+    font-size:55px;
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    color:#3E2723;   /* بني غامق */
+    margin-bottom:30px;
+}
+
+.about-text p{
+    font-family:'Poppins', sans-serif;
+    line-height:2;
+    font-size:18px;
+    color:#4E342E;   /* بني غامق أفتح قليلاً */
+}
+/*==========================
+IMAGE
+===========================*/
+
+.about-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.about-image img {
+    width: 370px;
+    height: 470px;
+    object-fit: cover;
+    padding: 12px;
+    background: #eee5d9;
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+
+    /* تحديد انحناء الزوايا بشكل مخصص (علوي-يسار، علوي-يمين، سفلي-يمين، سفلي-يسار) */
+    border-radius: 20px 220px 20px 220px;
+
+    /* إضافة البرواز الرفيع المحيط بالصورة */
+    border: 1px solid #c9b195;
+}
+
+/*==========================
+PRODUCTS
+===========================*/
+
+.products{
+
+    width:90%;
+
+    margin:100px auto;
+
+}
+/* =========================
+Background
+========================= */
+
+body{
+    position:relative;
+    background:transparent;
+    font-family:'Poppins',sans-serif;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+            linear-gradient(rgba(255,245,247,.60),rgba(255,245,247,.60)),
+            url("../images/notes/rose1.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    z-index:-1;
+}
+
+
+/* =========================
+Page
+========================= */
+
+.notes-page{
+    padding:100px 8%;
+}
+
+
+/* =========================
+About Section
+========================= */
+
+.about-note{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:80px;
+
+    margin-bottom:90px;
+
+    flex-wrap:wrap;
+}
+
+
+/* Text */
+
+.about-text{
+    flex:1;
+    min-width:320px;
+}
+
+.about-text h2{
+
+    font-size:55px;
+
+    font-family:'Playfair Display',serif;
+
+    color:#7A2335;
+
+    margin-bottom:30px;
+
+}
+
+.about-text p{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#5C3A41;
+
+}
+
+
+/* Image */
+
+.about-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.about-image img{
+
+    width:430px;
+
+    /* إضافة الـ padding والخلفية الفاتحة لتعطي مساحة للبرواز */
+    padding: 12px;
+    background: #fff5f7; /* لون فاتح متناسق مع ثيم الـ Rose الخاص بصفحتك */
+
+    /* تحديد انحناء الزوايا المخصص للشكل المطلوب */
+    border-radius: 25px 220px 25px 220px;
+
+    /* إضافة البرواز الرفيع بلون متناغم مع نصوص الصفحة (#7A2335) */
+    border: 1px solid rgba(122, 35, 53, 0.3);
+
+    box-shadow:
+            0 30px 60px rgba(0,0,0,.18),
+            0 10px 25px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.about-image img:hover{
+
+    /* الحفاظ على تأثير الحركة عند تمرير الماوس */
+    transform:translateY(-8px) scale(1.02);
+
+}
+
+
+/* =========================
+Title
+========================= */
+
+.section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-family:'Playfair Display',serif;
+
+    color:#7A2335;
+
+    margin-bottom:50px;
+
+}
+/* ==========================
+   WOODY CARDS
+========================== */
+
+.woody-page .product-card{
+
+    background:rgba(101, 67, 33, .22) !important;
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(101,67,33,.25);
+
+    box-shadow:0 10px 25px rgba(62,39,35,.18);
+
+}
+
+.woody-page .product-card:hover{
+
+    background:rgba(101,67,33,.35) !important;
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(62,39,35,.28);
+
+}
+
+
+/* ==========================
+   ROSE CARDS
+========================== */
+
+.rose-page .product-card{
+
+    background:rgba(236, 183, 197, .28) !important;
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(214,112,147,.25);
+
+    box-shadow:0 10px 25px rgba(214,112,147,.15);
+
+}
+
+.rose-page .product-card:hover{
+
+    background:rgba(236,183,197,.45) !important;
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(214,112,147,.25);
+
+}
+/*=================================
+LEMON PAGE
+=================================*/
+
+body.lemon-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+            linear-gradient(rgba(255,255,220,.45),rgba(255,255,220,.45)),
+            url("../images/notes/lemon1.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    z-index:-2;
+
+}
+
+/*==========================
+ABOUT
+==========================*/
+
+.lemon-page .about-note{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:80px;
+
+    margin:100px auto;
+
+    width:90%;
+
+    flex-wrap:wrap;
+
+}
+
+.lemon-page .about-text{
+
+    flex:1;
+
+    min-width:320px;
+
+}
+
+.lemon-page .about-text h2{
+
+    font-size:55px;
+
+    font-family:'Playfair Display',serif;
+
+    color:#8A6A00;
+
+    margin-bottom:30px;
+
+}
+
+.lemon-page .about-text p{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#6A5600;
+
+}
+
+.lemon-page .about-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.lemon-page .about-image img{
+
+    width:430px;
+
+    padding:12px;
+
+    background:#FFFBE6;
+
+    border-radius:25px 220px 25px 220px;
+
+    border:1px solid rgba(212,181,58,.35);
+
+    box-shadow:
+            0 30px 60px rgba(0,0,0,.18),
+            0 10px 25px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.lemon-page .about-image img:hover{
+
+    transform:translateY(-8px) scale(1.02);
+
+}
+
+/*==========================
+TITLE
+==========================*/
+
+.lemon-page .section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-family:'Playfair Display',serif;
+
+    color:#8A6A00;
+
+    margin-bottom:50px;
+
+}
+
+/*==========================
+CARDS
+==========================*/
+
+.lemon-page .product-card{
+
+    background:rgba(255,248,170,.45);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(236,205,69,.45);
+
+    box-shadow:0 10px 25px rgba(180,150,20,.18);
+
+    transition:.35s;
+
+}
+
+.lemon-page .product-card:hover{
+
+    background:rgba(255,248,170,.65);
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(180,150,20,.30);
+
+}
+/*=================================
+VANILLA PAGE
+=================================*/
+
+body.vanilla-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+            linear-gradient(rgba(255,250,242,.45),rgba(255,250,242,.45)),
+            url("../images/notes/vanilla1.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    z-index:-2;
+
+}
+
+/*==========================
+ABOUT
+==========================*/
+
+.vanilla-page .about-note{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:80px;
+
+    width:90%;
+
+    margin:100px auto;
+
+    flex-wrap:wrap;
+
+}
+
+.vanilla-page .about-text{
+
+    flex:1;
+    min-width:320px;
+
+}
+
+.vanilla-page .about-text h2{
+
+    font-size:55px;
+
+    font-family:'Playfair Display',serif;
+
+    color:#7B5A3E;
+
+    margin-bottom:30px;
+
+}
+
+.vanilla-page .about-text p{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#5E4633;
+
+}
+
+.vanilla-page .about-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.vanilla-page .about-image img{
+
+    width:430px;
+
+    padding:12px;
+
+    background:#FFF8F1;
+
+    border-radius:25px 220px 25px 220px;
+
+    border:1px solid rgba(160,130,90,.25);
+
+    box-shadow:
+            0 30px 60px rgba(0,0,0,.18),
+            0 10px 25px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.vanilla-page .about-image img:hover{
+
+    transform:translateY(-8px) scale(1.02);
+
+}
+
+/*==========================
+TITLE
+==========================*/
+
+.vanilla-page .section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-family:'Playfair Display',serif;
+
+    color:#7B5A3E;
+
+    margin-bottom:50px;
+
+}
+
+/*==========================
+CARDS
+==========================*/
+
+.vanilla-page .product-card{
+
+    background:rgba(245,236,220,.50);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(187,164,132,.35);
+
+    box-shadow:0 10px 25px rgba(120,90,50,.18);
+
+    transition:.35s;
+
+}
+
+.vanilla-page .product-card:hover{
+
+    background:rgba(245,236,220,.70);
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(120,90,50,.28);
+
+}
+/*=================================
+AMBER PAGE
+=================================*/
+
+body.amber-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+            linear-gradient(rgba(255,248,242,.45),rgba(255,248,242,.45)),
+            url("../images/notes/amber1.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    z-index:-2;
+
+}
+
+/*==========================
+ABOUT
+==========================*/
+
+.amber-page .about-note{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:80px;
+
+    width:90%;
+
+    margin:100px auto;
+
+    flex-wrap:wrap;
+
+}
+
+.amber-page .about-text{
+
+    flex:1;
+    min-width:320px;
+
+}
+
+.amber-page .about-text h2{
+
+    font-size:55px;
+
+    font-family:'Playfair Display',serif;
+
+    color:#A85C1B;
+
+    margin-bottom:30px;
+
+}
+
+.amber-page .about-text p{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#6F4423;
+
+}
+
+.amber-page .about-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.amber-page .about-image img{
+
+    width:430px;
+
+    padding:12px;
+
+    background:#FFF5ED;
+
+    border-radius:25px 220px 25px 220px;
+
+    border:1px solid rgba(180,110,40,.30);
+
+    box-shadow:
+            0 30px 60px rgba(0,0,0,.18),
+            0 10px 25px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.amber-page .about-image img:hover{
+
+    transform:translateY(-8px) scale(1.02);
+
+}
+
+/*==========================
+TITLE
+==========================*/
+
+.amber-page .section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-family:'Playfair Display',serif;
+
+    color:#A85C1B;
+
+    margin-bottom:50px;
+
+}
+
+/*==========================
+CARDS
+==========================*/
+
+.amber-page .product-card{
+
+    background:rgba(255,210,150,.45);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(230,145,60,.35);
+
+    box-shadow:0 10px 25px rgba(170,95,30,.18);
+
+    transition:.35s;
+
+}
+
+.amber-page .product-card:hover{
+
+    background:rgba(255,210,150,.65);
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(170,95,30,.28);
+
+}
+/*=================================
+MUSK PAGE
+=================================*/
+
+body.musk-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+            linear-gradient(rgba(255,250,248,.45),rgba(255,250,248,.45)),
+            url("../images/notes/musk1.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    z-index:-2;
+
+}
+
+/*==========================
+ABOUT
+==========================*/
+
+.musk-page .about-note{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:80px;
+
+    width:90%;
+
+    margin:100px auto;
+
+    flex-wrap:wrap;
+
+}
+
+.musk-page .about-text{
+
+    flex:1;
+    min-width:320px;
+
+}
+
+.musk-page .about-text h2{
+
+    font-size:55px;
+
+    font-family:'Playfair Display',serif;
+
+    color:#8B6B61;
+
+    margin-bottom:30px;
+
+}
+
+.musk-page .about-text p{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#6B514B;
+
+}
+
+/*==========================
+IMAGE
+==========================*/
+
+.musk-page .about-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.musk-page .about-image img{
+
+    width:430px;
+
+    padding:12px;
+
+    background:#FFF8F5;
+
+    border-radius:25px 220px 25px 220px;
+
+    border:1px solid rgba(160,130,120,.25);
+
+    box-shadow:
+            0 30px 60px rgba(0,0,0,.18),
+            0 10px 25px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.musk-page .about-image img:hover{
+
+    transform:translateY(-8px) scale(1.02);
+
+}
+
+/*==========================
+TITLE
+==========================*/
+
+.musk-page .section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-family:'Playfair Display',serif;
+
+    color:#8B6B61;
+
+    margin-bottom:50px;
+
+}
+
+/*==========================
+CARDS
+==========================*/
+
+.musk-page .product-card{
+
+    background:rgba(245,230,225,.50);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(180,155,145,.30);
+
+    box-shadow:0 10px 25px rgba(120,95,85,.18);
+
+    transition:.35s;
+
+}
+
+.musk-page .product-card:hover{
+
+    background:rgba(245,230,225,.70);
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(120,95,85,.28);
+
+}
