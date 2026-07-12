@@ -2,9 +2,514 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men | Arome</title>
+
+    <!-- CSS & Fonts -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Background + Glass Cards -->
+    <style>
+
+        body{
+            position:relative;
+            background:transparent !important;
+        }
+
+        body::before{
+            content:"";
+            position:fixed;
+            inset:0;
+
+            background:
+                    linear-gradient(rgba(248,243,237,.45), rgba(248,243,237,.45)),
+                    url("images/products/home.jpeg");
+
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+
+            z-index:-1;
+        }
+
+        .products-page{
+            background:transparent !important;
+        }
+
+        .product-card{
+            background:rgba(255,255,255,.35) !important;
+            backdrop-filter:blur(12px);
+            -webkit-backdrop-filter:blur(12px);
+
+            border:1px solid rgba(255,255,255,.45);
+
+            box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+            transition:.35s;
+        }
+
+        .product-card:hover{
+            background:rgba(255,255,255,.55) !important;
+            transform:translateY(-8px);
+            box-shadow:0 18px 35px rgba(0,0,0,.20);
+        }
+
+    </style>
+
 </head>
+
 <body>
+
+<div id="navbar"></div>
+
+<main class="products-page">
+
+    <h1 class="page-title">All Perfumes</h1>
+
+    <div class="products">
+
+        <!-- Dior Sauvage -->
+        <div class="product-card">
+            <span class="glass-tag men">Men</span>
+
+            <button class="wishlist-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/perfume1.jpeg" alt="Dior Sauvage">
+
+                <a href="sauvage.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+
+            <h3>Dior Sauvage</h3>
+
+            <p class="brand">Dior</p>
+
+            <p class="description">
+                Fresh woody fragrance with bergamot notes.
+            </p>
+
+            <p class="price">$120</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+
+        <!-- Creed Aventus -->
+        <div class="product-card">
+            <span class="glass-tag men">Men</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/perfume3.jpeg" alt="Creed Aventus">
+
+                <a href="aventus.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+            <h3>Creed Aventus</h3>
+
+            <p class="brand">Creed</p>
+
+            <p class="description">
+                Luxury fruity woody fragrance.
+            </p>
+
+            <p class="price">$350</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+        <div class="product-card">
+            <span class="glass-tag men">Men</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/onemillion.jpg" alt="One Million">
+
+                <a href="onemillion.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+            <h3>One Million</h3>
+            <p class="brand">Rabanne</p>
+            <p class="description">
+                Bold woody spicy fragrance
+            </p>
+
+            <p class="price">$250</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+
+
+
+        <div class="product-card">
+            <span class="glass-tag men">Men</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/light blue.jpeg" alt="light blue">
+
+                <a href="light blue.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+            <h3>Light Blue</h3>
+
+            <p class="brand">Dolce & Gabbana</p>
+
+            <p class="description">
+                Fresh citrus lemon fragrance        </p>
+
+            <p class="price">$110</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+
+        <div class="product-card">
+            <span class="glass-tag men">Men</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/Tom Ford Amber .jpeg" alt="light blue">
+
+                <a href="Tom Ford Amber.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+            <h3>Tom Ford </h3>
+
+            <p class="brand">Tom Ford</p>
+
+            <p class="description">
+                Rich warm amber fragrance      </p>
+
+            <p class="price">$400</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+
+
+
+        <!-- Montale Black Musk -->
+        <div class="product-card">
+            <span class="glass-tag men">UNISEX</span>
+
+            <button class="wishlist-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/unisex1.jpeg" alt=" Black Musk">
+
+                <a href=" Black Musk.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+
+            <h3> Black Musk</h3>
+
+            <p class="brand">Montale</p>
+
+            <p class="description">
+                Intense black musk fragrance            </p>
+
+            <p class="price">$120</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+
+        <!-- CK One -->
+        <div class="product-card">
+            <span class="glass-tag men">UNISEX</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/unisex2.jpeg" alt="ck one">
+
+                <a href="ck one.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+            <h3>CK One</h3>
+
+            <p class="brand">Calvin Klein</p>
+
+            <p class="description">
+                Fresh citrus lemon fragrance            </p>
+
+            <p class="price">$50</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+        <div class="product-card">
+            <span class="glass-tag men">UNISEX</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/unisex3.jpeg" alt="One Million">
+
+                <a href="Dubai Effect.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+            <h3>Dubai Effect</h3>
+            <p class="brand">Oud Elixir</p>
+            <p class="description">
+                Warm tobacco amber fragrance
+            </p>
+
+            <p class="price">$55</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+
+
+
+        <div class="product-card">
+            <span class="glass-tag men">UNISEX</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/unisex4.jpeg" alt="light blue">
+
+                <a href="REEF 33.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+            <h3>REEF 33</h3>
+
+            <p class="brand">Reef</p>
+
+            <p class="description">
+                Warm fruity woody fragrance</p>
+
+            <p class="price">$90</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+
+        <div class="product-card">
+            <span class="glass-tag men">UNISEX</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/unisex5.jpeg" alt="Blanche">
+
+                <a href="Blanche.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+            <h3>Blanche</h3>
+
+            <p class="brand">Byredo</p>
+
+            <p class="description">
+                Clean soft musk fragrance.</p>
+
+            <p class="price">$230</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+        <div class="product-card">
+
+            <span class="glass-tag women">Women</span>
+
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/pdadaa.jpeg" alt="Prada Milano">
+
+                <a href="PRADA.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+
+            <h3>Prada Milano</h3>
+
+            <p class="brand">PRADA</p>
+
+            <p class="description">
+                Refined floral with a luxurious touch.
+            </p>
+
+            <p class="price">$125</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+            </button>
+        </div>
+        <!-- Coco Chanel -->
+        <div class="product-card">
+            <span class="glass-tag women">Women</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <div class="image-container">
+                <img src="images/products/perfume4.jpeg" alt="Coco Chanel">
+                <a href="coco.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+            <h3>Coco Chanel</h3>
+            <p class="brand">CHANEL</p>
+            <p class="description">
+                Refined floral with a luxurious touch.
+            </p>
+            <p class="price">$185</p>
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+            </button>
+
+        </div>
+        <div class="product-card">
+            <span class="glass-tag women">Women</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <div class="image-container">
+                <img src="images/products/gucci.jpeg" alt="gucci">
+                <a href="gucci.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+            <h3>Gucci Floral</h3>
+            <p class="brand">GUCCI</p>
+            <p class="description">
+                Soft feminine floral fragrance
+            </p>
+            <br>
+            <p class="price">$185</p>
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+            </button>
+        </div>
+        <div class="product-card">
+            <span class="glass-tag women">Women</span>
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <div class="image-container">
+                <img src="images/products/miss dior.jpeg" alt="gucci">
+                <a href="miss dior.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+            <h3>Miss Dior</h3>
+            <p class="brand">DIOR</p>
+            <p class="description">
+                Romantic elegant floral fragrance
+            </p>
+            <br>
+            <p class="price">$215</p>
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+            </button>
+        </div>
+        <!-- Good Girl -->
+        <div class="product-card">
+
+            <span class="glass-tag women">Women</span>
+
+            <button class="wishlist-btn" data-tooltip="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="image-container">
+                <img src="images/products/goodgirl.jpg" alt="Good Girl">
+
+                <a href="good girl.html" class="details-overlay">
+                    View Details
+                </a>
+            </div>
+
+            <h3>Good Girl</h3>
+
+            <p class="brand">CAROLINA HERRERA</p>
+
+            <p class="description">
+                Confident seductive signature scent.
+            </p>
+
+            <p class="price">$150</p>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="js/components.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

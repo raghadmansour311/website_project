@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="footer-logo">
                     <img src="images/notes/logo.png" alt="AROME Logo">
                     <p class="footer-subtitle">Luxury Fragrance Experience</p>
-                    <a href="about.html" class="meet-team-link">Meet the Team</a>
+                    <a href="about.html" class="meet-team-link">About Us</a>
                 </div>
                 <!-- Contact -->
                 <div class="footer-contact">
