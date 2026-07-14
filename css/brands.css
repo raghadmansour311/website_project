@@ -1,6 +1,17 @@
 /* ========================= */
 /* Reset */
 /* ========================= */
+/* Active Navbar Link */
+
+
+.nav-links a.active{
+    color:#D8C3A5;
+}
+
+.nav-links a.active{
+    color:#D8C3A5;
+    font-weight:600;
+}
 
 *{
     margin: 0;

@@ -1,0 +1,296 @@
+/*==================================================
+LIMITED PAGE
+==================================================*/
+
+/*=========================
+BACKGROUND
+=========================*/
+
+body.limited-page{
+    position: relative;
+    background: transparent;
+}
+
+body.limited-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+            linear-gradient(rgba(255,250,245,.45),rgba(255,250,245,.45)),
+            url("../images/backgrounds/brands-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    z-index:-2;
+
+}
+
+body.limited-page::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+/*=========================
+LIMITED HERO
+=========================*/
+
+.limited-hero{
+
+    width:90%;
+
+    margin:auto;
+
+    padding:80px 0;
+
+    text-align:center;
+
+    background:transparent;
+
+}
+
+.limited-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:50px;
+
+}
+
+/*=========================
+LETTER CARDS
+=========================*/
+
+.limited-item{
+
+    width:145px;
+
+    height:160px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    background:rgba(255,250,246,.35);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    box-shadow:
+            0 12px 28px rgba(0,0,0,.10),
+            inset 0 1px 1px rgba(255,255,255,.65);
+
+    transition:.35s;
+
+}
+
+.limited-item:hover{
+
+    transform:translateY(-8px) scale(1.05);
+
+    background:rgba(255,250,246,.55);
+
+    box-shadow:
+            0 18px 40px rgba(0,0,0,.18);
+
+}
+
+/*=========================
+LETTERS
+=========================*/
+
+.limited-text{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:130px;
+
+    font-weight:900;
+
+    line-height:1;
+
+    color:transparent;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+/*=========================
+IMAGES
+=========================*/
+
+.l{
+    background-image:url("../images/limited/LE1.jpeg");
+}
+
+.i1{
+    background-image:url("../images/limited/LE2.jpeg");
+}
+
+.m{
+    background-image:url("../images/brand-details/dior1.jpg");
+}
+
+.i2{
+    background-image:url("../images/limited/LM4.jpeg");
+}
+
+.t{
+    background-image:url("../images/limited/LE5.jpeg");
+}
+
+.e{
+    background-image:url("../images/limited/LE6.jpeg");
+}
+
+.d{
+    background-image:url("../images/limited/LE7.jpeg");
+}
+
+/*=========================
+TITLE
+=========================*/
+
+.limited-hero h1{
+
+    margin:25px 0 18px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:60px;
+
+    color:#5C4033;
+
+}
+
+.limited-hero p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#6D584B;
+
+}
+
+/*=========================
+PRODUCT CARDS
+=========================*/
+
+.limited-page .product-card{
+
+    background:rgba(255,250,246,.35);
+
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    box-shadow:0 12px 28px rgba(0,0,0,.12);
+
+    transition:.35s;
+
+}
+
+.limited-page .product-card:hover{
+
+    background:rgba(255,250,246,.55);
+
+    transform:translateY(-8px);
+
+}
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+@media(max-width:768px){
+
+    .limited-hero{
+
+        padding:50px 15px;
+
+    }
+
+    .limited-container{
+
+        gap:8px;
+
+    }
+
+    .limited-item{
+
+        width:70px;
+
+        height:80px;
+
+    }
+
+    .limited-text{
+
+        font-size:65px;
+
+    }
+
+    .limited-hero h1{
+
+        font-size:38px;
+
+    }
+
+    .limited-hero p{
+
+        font-size:15px;
+
+        padding:0 10px;
+
+    }
+
+}

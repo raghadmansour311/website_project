@@ -52,6 +52,19 @@
 }
 
 /* ========================= */
+/* Active Page */
+/* ========================= */
+
+.nav-links a.active{
+    color: #D8C3A5;
+    font-weight: 600;
+}
+
+.nav-links a.active::after{
+    width: 100%;
+}
+
+/* ========================= */
 /* Dropdown */
 /* ========================= */
 .dropdown{
