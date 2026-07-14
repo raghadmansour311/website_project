@@ -1,0 +1,1360 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    color:#333;
+
+}
+
+/*=========================
+BACKGROUND
+=========================*/
+
+body.dior-page{
+    position: relative;
+    overflow-x: hidden;
+}
+
+body.dior-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("../images/brand-details/dior-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    filter:blur(3px);
+
+    transform:scale(1.06);
+
+    z-index:-2;
+
+}
+
+body.dior-page::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:linear-gradient(
+            rgba(255,255,255,.40),
+            rgba(255,255,255,.40)
+    );
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+/*=========================
+PAGE
+=========================*/
+
+.brand-page{
+
+    width:90%;
+
+    margin:90px auto;
+
+}
+
+/*=========================
+ABOUT
+=========================*/
+
+.brand-about{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:80px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:120px;
+
+}
+
+.brand-text{
+
+    flex:1;
+
+    min-width:350px;
+
+}
+
+.brand-text h2{
+
+    font-size:60px;
+
+    font-family:'Playfair Display',serif;
+
+    color:#3E2D24;
+
+    margin-bottom:30px;
+
+}
+
+.brand-text p{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#4E3B31;
+
+}
+
+/*=========================
+IMAGES
+=========================*/
+
+/*=========================
+IMAGES
+=========================*/
+
+.brand-images{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    position:relative;
+
+    min-width:420px;
+
+}
+
+.main-image{
+
+    width:380px;
+    height:500px;
+
+    object-fit:cover;
+
+    padding:12px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:35px;
+
+    box-shadow:
+            0 20px 45px rgba(0,0,0,.18);
+
+}
+
+/* الصورة الدائرية */
+
+.circle-image{
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    padding:8px;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+            0 15px 35px rgba(0,0,0,.20);
+
+    right:20px;
+
+    bottom:-20px;
+
+    transition:.4s;
+
+}
+
+.circle-image:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*=========================
+TITLE
+=========================*/
+
+.section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-family:'Playfair Display',serif;
+
+    color:#3E2D24;
+
+    margin-bottom:50px;
+
+}
+
+/*=========================
+CARDS
+=========================*/
+
+.product-card{
+
+    background:rgba(255,250,246,.45);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    border-radius:20px;
+
+    box-shadow:
+            0 8px 30px rgba(0,0,0,.10),
+            inset 0 1px 1px rgba(255,255,255,.35);
+
+    transition:.35s ease;
+
+}
+
+.product-card:hover{
+
+    background:rgba(255,250,246,.60);
+
+    transform:translateY(-8px);
+
+    box-shadow:
+            0 18px 40px rgba(0,0,0,.15),
+            inset 0 1px 2px rgba(255,255,255,.45);
+
+}
+
+/*=========================
+CHANEL BACKGROUND
+=========================*/
+
+body.chanel-page{
+    position:relative;
+    overflow-x:hidden;
+}
+
+body.chanel-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("../images/brand-details/chanel-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    filter:blur(3px);
+
+    transform:scale(1.05);
+
+    z-index:-2;
+
+}
+
+body.chanel-page::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(255,255,255,.35);
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+/*=========================
+CHANEL COLORS
+=========================*/
+
+.chanel-page .brand-text h2,
+.chanel-page .section-title{
+
+    color:#1E1E1E;
+
+}
+
+.chanel-page .brand-text p{
+
+    color:#444;
+
+}
+
+
+/*=========================
+CHANEL CARDS
+=========================*/
+
+.chanel-page .product-card{
+
+    background:rgba(255,255,255,.42);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    border-radius:20px;
+
+    box-shadow:
+            0 8px 30px rgba(0,0,0,.10),
+            inset 0 1px 1px rgba(255,255,255,.35);
+
+    transition:.35s;
+
+}
+
+.chanel-page .product-card:hover{
+
+    background:rgba(255,255,255,.60);
+
+    transform:translateY(-8px);
+
+    box-shadow:
+            0 18px 40px rgba(0,0,0,.15),
+            inset 0 1px 2px rgba(255,255,255,.45);
+
+}
+
+/*=========================
+GUCCI BACKGROUND
+=========================*/
+
+body.gucci-page{
+    position:relative;
+    overflow-x:hidden;
+}
+
+body.gucci-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("../images/brand-details/gucci-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    filter:blur(4px);
+
+    transform:scale(1.05);
+
+    z-index:-2;
+
+}
+
+body.gucci-page::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(255,255,255,.35);
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+/*=========================
+GUCCI COLORS
+=========================*/
+
+.gucci-page .brand-text h2,
+.gucci-page .section-title{
+
+    color:#8B6B4A;
+
+}
+
+.gucci-page .brand-text p{
+
+    color:#5E4B3C;
+
+}
+
+/*=========================
+GUCCI CARDS
+=========================*/
+
+.gucci-page .product-card{
+
+    background:rgba(249,243,235,.48);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.60);
+
+    border-radius:20px;
+
+    box-shadow:
+            0 8px 30px rgba(0,0,0,.10),
+            inset 0 1px 1px rgba(255,255,255,.40);
+
+    transition:.35s;
+
+}
+
+.gucci-page .product-card:hover{
+
+    background:rgba(249,243,235,.65);
+
+    transform:translateY(-8px);
+
+    box-shadow:
+            0 18px 40px rgba(0,0,0,.15),
+            inset 0 1px 2px rgba(255,255,255,.45);
+
+}
+
+/*=========================
+TOM FORD BACKGROUND
+=========================*/
+
+body.tomford-page{
+    position:relative;
+    overflow-x:hidden;
+}
+
+body.tomford-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("../images/brand-details/tomford-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    filter:blur(4px);
+
+    transform:scale(1.05);
+
+    z-index:-2;
+
+}
+
+body.tomford-page::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(255,248,242,.35);
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+/*=========================
+TOM FORD COLORS
+=========================*/
+
+.tomford-page .brand-text h2,
+.tomford-page .section-title{
+
+    color:#8A5A3C;
+
+}
+
+.tomford-page .brand-text p{
+
+    color:#5F4638;
+
+}
+
+/*=========================
+TOM FORD CARDS
+=========================*/
+
+.tomford-page .product-card{
+
+    background:rgba(247,238,228,.48);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.60);
+
+    border-radius:20px;
+
+    box-shadow:
+            0 8px 30px rgba(0,0,0,.10),
+            inset 0 1px 1px rgba(255,255,255,.40);
+
+    transition:.35s;
+
+}
+
+.tomford-page .product-card:hover{
+
+    background:rgba(247,238,228,.65);
+
+    transform:translateY(-8px);
+
+    box-shadow:
+            0 18px 40px rgba(0,0,0,.15),
+            inset 0 1px 2px rgba(255,255,255,.45);
+
+}
+
+/*=========================
+CREED BACKGROUND
+=========================*/
+
+body.creed-page{
+    position:relative;
+    overflow-x:hidden;
+}
+
+body.creed-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("../images/brand-details/creed-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    filter:blur(4px);
+
+    transform:scale(1.05);
+
+    z-index:-2;
+
+}
+
+body.creed-page::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(250,248,245,.35);
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+/*=========================
+CREED COLORS
+=========================*/
+
+.creed-page .brand-text h2,
+.creed-page .section-title{
+
+    color:#66625E;
+
+}
+
+.creed-page .brand-text p{
+
+    color:#5A5652;
+
+}
+
+/*=========================
+CREED CARDS
+=========================*/
+
+.creed-page .product-card{
+
+    background:rgba(245,243,239,.48);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.60);
+
+    border-radius:20px;
+
+    box-shadow:
+            0 8px 30px rgba(0,0,0,.10),
+            inset 0 1px 1px rgba(255,255,255,.40);
+
+    transition:.35s;
+
+}
+
+.creed-page .product-card:hover{
+
+    background:rgba(245,243,239,.65);
+
+    transform:translateY(-8px);
+
+    box-shadow:
+            0 18px 40px rgba(0,0,0,.15),
+            inset 0 1px 2px rgba(255,255,255,.45);
+
+}
+
+/*=========================
+RABANNE BACKGROUND
+=========================*/
+
+body.rabanne-page{
+    position:relative;
+    overflow-x:hidden;
+}
+
+body.rabanne-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("../images/brand-details/rabanne-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    filter:blur(4px);
+
+    transform:scale(1.05);
+
+    z-index:-2;
+
+}
+
+body.rabanne-page::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(255,250,240,.35);
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+/*=========================
+RABANNE COLORS
+=========================*/
+
+.rabanne-page .brand-text h2,
+.rabanne-page .section-title{
+
+    color:#B18A4A;
+
+}
+
+.rabanne-page .brand-text p{
+
+    color:#6D5A3C;
+
+}
+
+/*=========================
+RABANNE CARDS
+=========================*/
+
+.rabanne-page .product-card{
+
+    background:rgba(250,243,225,.48);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.60);
+
+    border-radius:20px;
+
+    box-shadow:
+            0 8px 30px rgba(0,0,0,.10),
+            inset 0 1px 1px rgba(255,255,255,.40);
+
+    transition:.35s;
+
+}
+
+.rabanne-page .product-card:hover{
+
+    background:rgba(250,243,225,.65);
+
+    transform:translateY(-8px);
+
+    box-shadow:
+            0 18px 40px rgba(0,0,0,.15),
+            inset 0 1px 2px rgba(255,255,255,.45);
+
+}
+
+/*=========================
+MONTALE BACKGROUND
+=========================*/
+
+body.montale-page{
+    position:relative;
+    overflow-x:hidden;
+}
+
+body.montale-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("../images/brand-details/montale-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    filter:blur(4px);
+
+    transform:scale(1.05);
+
+    z-index:-2;
+
+}
+
+body.montale-page::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(255,249,244,.35);
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+/*=========================
+MONTALE COLORS
+=========================*/
+
+.montale-page .brand-text h2,
+.montale-page .section-title{
+
+    color:#6E4B3A;
+
+}
+
+.montale-page .brand-text p{
+
+    color:#5A4033;
+
+}
+
+/*=========================
+MONTALE CARDS
+=========================*/
+
+.montale-page .product-card{
+
+    background:rgba(250,245,239,.48);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.60);
+
+    border-radius:20px;
+
+    box-shadow:
+            0 8px 30px rgba(0,0,0,.10),
+            inset 0 1px 1px rgba(255,255,255,.40);
+
+    transition:.35s;
+
+}
+
+.montale-page .product-card:hover{
+
+    background:rgba(250,245,239,.65);
+
+    transform:translateY(-8px);
+
+    box-shadow:
+            0 18px 40px rgba(0,0,0,.15),
+            inset 0 1px 2px rgba(255,255,255,.45);
+
+}
+
+/*=========================
+CALVIN KLEIN BACKGROUND
+=========================*/
+
+body.ck-page{
+    position:relative;
+    overflow-x:hidden;
+}
+
+body.ck-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("../images/brand-details/ck-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    filter:blur(4px);
+
+    transform:scale(1.05);
+
+    z-index:-2;
+
+}
+
+body.ck-page::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(255,255,255,.35);
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+/*=========================
+CALVIN KLEIN COLORS
+=========================*/
+
+.ck-page .brand-text h2,
+.ck-page .section-title{
+
+    color:#5E5E5E;
+
+}
+
+.ck-page .brand-text p{
+
+    color:#6B6B6B;
+
+}
+
+/*=========================
+CALVIN KLEIN CARDS
+=========================*/
+
+.ck-page .product-card{
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.65);
+
+    border-radius:20px;
+
+    box-shadow:
+            0 8px 30px rgba(0,0,0,.10),
+            inset 0 1px 1px rgba(255,255,255,.45);
+
+    transition:.35s;
+
+}
+
+.ck-page .product-card:hover{
+
+    background:rgba(255,255,255,.60);
+
+    transform:translateY(-8px);
+
+    box-shadow:
+            0 18px 40px rgba(0,0,0,.15),
+            inset 0 1px 2px rgba(255,255,255,.50);
+
+}
+
+/*=========================
+YSL BACKGROUND
+=========================*/
+
+body.ysl-page{
+    position:relative;
+    overflow-x:hidden;
+}
+
+body.ysl-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("../images/brand-details/ysl-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    filter:blur(4px);
+
+    transform:scale(1.05);
+
+    z-index:-2;
+
+}
+
+body.ysl-page::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(255,255,255,.30);
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+/*=========================
+YSL COLORS
+=========================*/
+
+.ysl-page .brand-text h2,
+.ysl-page .section-title{
+
+    color:#222222;
+
+}
+
+.ysl-page .brand-text p{
+
+    color:#4A4A4A;
+
+}
+
+/*=========================
+YSL CARDS
+=========================*/
+
+.ysl-page .product-card{
+
+    background:rgba(255,255,255,.42);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.65);
+
+    border-radius:20px;
+
+    box-shadow:
+            0 8px 30px rgba(0,0,0,.10),
+            inset 0 1px 1px rgba(255,255,255,.45);
+
+    transition:.35s;
+
+}
+
+.ysl-page .product-card:hover{
+
+    background:rgba(255,255,255,.58);
+
+    transform:translateY(-8px);
+
+    box-shadow:
+            0 18px 40px rgba(0,0,0,.15),
+            inset 0 1px 2px rgba(255,255,255,.50);
+
+}
+
+/*=========================
+PRADA BACKGROUND
+=========================*/
+
+body.prada-page{
+    position:relative;
+    overflow-x:hidden;
+}
+
+body.prada-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("../images/brand-details/prada-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    filter:blur(4px);
+
+    transform:scale(1.05);
+
+    z-index:-2;
+
+}
+
+body.prada-page::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(255,250,246,.35);
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+/*=========================
+PRADA COLORS
+=========================*/
+
+.prada-page .brand-text h2,
+.prada-page .section-title{
+
+    color:#8C6B58;
+
+}
+
+.prada-page .brand-text p{
+
+    color:#6B5648;
+
+}
+
+/*=========================
+PRADA CARDS
+=========================*/
+
+.prada-page .product-card{
+
+    background:rgba(248,242,236,.48);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.60);
+
+    border-radius:20px;
+
+    box-shadow:
+            0 8px 30px rgba(0,0,0,.10),
+            inset 0 1px 1px rgba(255,255,255,.40);
+
+    transition:.35s;
+
+}
+
+.prada-page .product-card:hover{
+
+    background:rgba(248,242,236,.65);
+
+    transform:translateY(-8px);
+
+    box-shadow:
+            0 18px 40px rgba(0,0,0,.15),
+            inset 0 1px 2px rgba(255,255,255,.45);
+
+}
+
+/*=========================
+CAROLINA HERRERA BACKGROUND
+=========================*/
+
+body.carolina-page{
+    position:relative;
+    overflow-x:hidden;
+}
+
+body.carolina-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("../images/brand-details/carolina-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    filter:blur(4px);
+
+    transform:scale(1.05);
+
+    z-index:-2;
+
+}
+
+body.carolina-page::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(255,248,249,.35);
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+/*=========================
+CAROLINA HERRERA COLORS
+=========================*/
+
+.carolina-page .brand-text h2,
+.carolina-page .section-title{
+
+    color:#6B2335;
+
+}
+
+.carolina-page .brand-text p{
+
+    color:#5A3A42;
+
+}
+
+/*=========================
+CAROLINA HERRERA CARDS
+=========================*/
+
+.carolina-page .product-card{
+
+    background:rgba(255,245,246,.48);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.60);
+
+    border-radius:20px;
+
+    box-shadow:
+            0 8px 30px rgba(0,0,0,.10),
+            inset 0 1px 1px rgba(255,255,255,.40);
+
+    transition:.35s;
+
+}
+
+.carolina-page .product-card:hover{
+
+    background:rgba(255,245,246,.65);
+
+    transform:translateY(-8px);
+
+    box-shadow:
+            0 18px 40px rgba(0,0,0,.15),
+            inset 0 1px 2px rgba(255,255,255,.45);
+
+}
+
+/*=========================
+DOLCE & GABBANA BACKGROUND
+=========================*/
+
+body.dolce-page{
+    position:relative;
+    overflow-x:hidden;
+}
+
+body.dolce-page::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+            linear-gradient(rgba(255,255,255,.35),rgba(255,255,255,.35)),
+            url("../images/brand-details/dolce-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    filter:blur(4px);
+
+    transform:scale(1.05);
+
+    z-index:-2;
+
+}
+
+body.dolce-page::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(255,255,255,.18);
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+/*=========================
+DOLCE & GABBANA COLORS
+=========================*/
+
+.dolce-page .brand-text h2,
+.dolce-page .section-title{
+
+    color:#183A63;
+
+}
+
+.dolce-page .brand-text p{
+
+    color:#39506B;
+
+}
+
+/*=========================
+DOLCE & GABBANA CARDS
+=========================*/
+
+.dolce-page .product-card{
+
+    background:rgba(245,250,255,.48);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.65);
+
+    border-radius:20px;
+
+    box-shadow:
+            0 8px 30px rgba(24,58,99,.12),
+            inset 0 1px 1px rgba(255,255,255,.45);
+
+    transition:.35s;
+
+}
+
+.dolce-page .product-card:hover{
+
+    background:rgba(245,250,255,.65);
+
+    transform:translateY(-8px);
+
+    box-shadow:
+            0 18px 40px rgba(24,58,99,.18),
+            inset 0 1px 2px rgba(255,255,255,.50);
+
+}
+

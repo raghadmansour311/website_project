@@ -72,3 +72,32 @@ wishlistButtons.forEach(button => {
         }
     });
 });
+
+/* ========================= */
+/* Notes Slider */
+/* ========================= */
+
+const notesContainer = document.querySelector(".notes-container");
+const notesLeft = document.querySelector(".notes-left");
+const notesRight = document.querySelector(".notes-right");
+
+if (notesContainer && notesLeft && notesRight) {
+
+    const card = notesContainer.querySelector(".note-card");
+    const scrollAmount = card.offsetWidth + 35; // 35 هي قيمة الـ gap
+
+    notesRight.addEventListener("click", () => {
+        notesContainer.scrollBy({
+            left: scrollAmount,
+            behavior: "smooth"
+        });
+    });
+
+    notesLeft.addEventListener("click", () => {
+        notesContainer.scrollBy({
+            left: -scrollAmount,
+            behavior: "smooth"
+        });
+    });
+
+}

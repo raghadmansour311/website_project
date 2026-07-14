@@ -379,12 +379,21 @@ main {
     margin-bottom: 50px;
 }
 
-.notes-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-    flex-wrap: wrap;
+.notes-container{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+
+    flex-wrap:nowrap;
+    overflow-x:auto;
+
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+
+    gap:35px;
+    width:100%;
+
+    padding:10px 5px;
 }
 
 .notes-container:hover .note-card {
@@ -394,6 +403,7 @@ main {
 .note-card {
     text-align: center;
     transition: .4s;
+    flex:0 0 180px;
 }
 
 .note-card:hover {
@@ -431,6 +441,57 @@ main {
 
 .note-card:hover h3 {
     color: #8B5E3C;
+}
+
+.notes-slider{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.notes-container{
+    display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+    gap:35px;
+    width:100%;
+}
+
+.notes-container::-webkit-scrollbar{
+    display:none;
+}
+
+.note-card{
+    flex:0 0 auto;
+}
+
+.notes-arrow{
+
+    width:48px;
+    height:48px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#8B5E3C;
+    color:#fff;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    flex-shrink:0;
+}
+
+.notes-arrow:hover{
+
+    background:#C8A27A;
+    transform:scale(1.08);
+
 }
 /* ========================= */
 /* Product Image Hover */
@@ -668,6 +729,14 @@ main {
     color: #E8DCCF;
     font-size: 14px;
     letter-spacing: 1px;
+}
+
+.footer-about:hover{
+
+    color: #D8C3A5;
+
+    transform: translateY(-2px);
+
 }
 
 /* ========================================== */
