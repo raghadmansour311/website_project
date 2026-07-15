@@ -10,6 +10,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f8f3ed;
+
+    padding-top: 90px;
 }
 
 main {
@@ -20,12 +22,21 @@ main {
 /* Navbar Style */
 /* ========================= */
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
     width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 20px 60px;
     background: #6F4E37;
+
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0,0,0,.12);
 }
 
 .logo, .logo a {
@@ -137,9 +148,8 @@ main {
 .hero {
     position: relative;
     width: 100%;
-    height: 80vh;
-    overflow: hidden;
-    cursor: none;
+    height: calc(80vh + 90px);
+    margin-top: -90px;
 }
 
 .hero video {
@@ -699,14 +709,13 @@ main {
     transform: translateX(5px);
 }
 
-/* إلغاء تأثير الـ Hover تماماً عن روابط الإيميل والتواصل وتثبيتها */
 .footer-contact a {
     cursor: default; /* إلغاء مؤشر الضغط */
     transition: none; /* إلغاء أي حركة */
 }
 
 .footer-contact a:hover {
-    color: #F4EBDD; /* الحفاظ على نفس اللون الفاتح الأصلي دون تغيير */
+    color: #F4EBDD;
     transform: none; /* إلغاء الحركة الجانبية */
 }
 
@@ -1010,4 +1019,40 @@ main {
     font-size: 28px;
     color: #6F4E37;
     line-height: 1.6;
+}
+.wishlist-btn.active{
+
+    color:#8B5E3C;
+
+}
+
+.wishlist-btn.active i{
+
+    color:#8B5E3C;
+
+}
+/* ==========================
+Wishlist Heart
+========================== */
+
+.wishlist-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: #222;
+    transition: .3s;
+}
+
+.wishlist-btn:hover{
+    transform: scale(1.15);
+}
+
+.wishlist-btn.active i{
+    color: #C75C5C;
+}
+
+
+.wishlist-btn.active i{
+    color: #e63946;
 }

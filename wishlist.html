@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wishlist | AROME</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/wishlist.css">
+
+</head>
+
+<body class="wishlist-page">
+
+<div id="navbar"></div>
+
+<main class="wishlist-container">
+
+    <h1 class="page-title">
+        My Wishlist
+    </h1>
+
+    <div class="wishlist-table">
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>Image</th>
+
+                <th>Product Name</th>
+
+                <th>Brand</th>
+
+                <th>Price</th>
+
+                <th>Add To Cart</th>
+
+                <th></th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="wishlist-body">
+
+            <!-- المنتجات ستظهر هنا تلقائياً -->
+
+            </tbody>
+
+        </table>
+
+        <div id="empty-message" class="empty-message">
+
+            <i class="fa-regular fa-heart"></i>
+
+            <h2>Your wishlist is empty</h2>
+
+            <p>
+                Add your favourite perfumes by clicking the heart icon.
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="js/components.js"></script>
+
+<script>
+
+    let wishlist =
+        JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    const tableBody =
+        document.getElementById("wishlist-body");
+
+    const emptyMessage =
+        document.getElementById("empty-message");
+
+    function displayWishlist() {
+
+        tableBody.innerHTML = "";
+
+        if (wishlist.length === 0) {
+
+            emptyMessage.style.display = "block";
+
+            return;
+
+        }
+
+        emptyMessage.style.display = "none";
+
+        wishlist.forEach((product, index) => {
+
+            tableBody.innerHTML += `
+
+<tr>
+
+<td>
+<img src="${product.image}" class="wishlist-image">
+</td>
+
+<td>${product.name}</td>
+
+<td>${product.brand}</td>
+
+<td>${product.price}</td>
+
+<td>
+
+<button class="cart-btn">
+<i class="fa-solid fa-cart-shopping"></i>
+Add To Cart
+</button>
+
+</td>
+
+<td>
+
+<button
+class="delete-btn"
+onclick="removeItem(${index})">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</td>
+
+</tr>
+
+`;
+
+        });
+    }
+
+    function removeItem(index){
+
+        wishlist.splice(index, 1);
+
+        localStorage.setItem(
+            "wishlist",
+            JSON.stringify(wishlist)
+        );
+
+        displayWishlist();
+
+    }
+    displayWishlist();
+
+</script>
+
+</body>
+
+</html>

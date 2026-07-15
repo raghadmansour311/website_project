@@ -39,14 +39,13 @@ body {
     gap: 30px;
 }
 
-/* حل مشكلة السلايدر في الصفحة الرئيسية دون تخريب صفحات الأقسام */
 .best-sellers .products {
     width: 100%;
     justify-content: flex-start;
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* لإخفاء شريط التمرير في متصفح فايرفوكس */
+    scrollbar-width: none;
 }
 
 .best-sellers .products::-webkit-scrollbar {
@@ -169,11 +168,9 @@ body {
 .glass-tag.women { border-color: rgba(200,162,122,.55); }
 
 
-/* إعدادات الصفحة الأساسية */
-/* 1. تطبيق الأوبيسيتي على الخلفية بشكل منفصل تماماً */
-/* ========================= */
+
 /* Background */
-/* ========================= */
+
 
 body{
     position: relative;

@@ -1,0 +1,269 @@
+/*====================================
+Wishlist Page
+====================================*/
+
+body.wishlist-page{
+    position:relative;
+    background:transparent;
+    font-family:'Poppins',sans-serif;
+}
+
+body.wishlist-page::before{
+
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    background:
+            linear-gradient(rgba(248,243,237,.45),rgba(248,243,237,.45)),
+            url("../images/products/home.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    z-index:-2;
+
+}
+
+body.wishlist-page::after{
+
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+
+    z-index:-1;
+
+}
+
+/*====================================
+Container
+====================================*/
+
+.wishlist-container{
+
+    width:90%;
+
+    margin:auto;
+
+    padding:90px 0 70px;
+
+}
+
+.page-title{
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:55px;
+
+    color:#5C4033;
+
+    margin-bottom:45px;
+
+}
+
+/*====================================
+Table
+====================================*/
+
+.wishlist-table{
+
+    background: rgba(216,195,165,.45);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#6F4E37;
+
+}
+
+thead th{
+
+    color:white;
+
+    padding:22px;
+
+    font-size:17px;
+
+    font-weight:500;
+
+}
+
+tbody td{
+
+    text-align:center;
+
+    padding:22px;
+
+    border-bottom:1px solid rgba(92,64,51,.15);
+
+    color:#5C4033;
+
+    font-size:16px;
+
+}
+
+tbody tr:hover{
+
+    background:rgba(255,255,255,.18);
+
+}
+
+/*====================================
+Image
+====================================*/
+
+.wishlist-image{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+
+}
+
+/*====================================
+Buttons
+====================================*/
+
+.cart-btn{
+
+    padding:12px 24px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#6F4E37;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.cart-btn:hover{
+
+    background:#8B5E3C;
+
+}
+
+.delete-btn{
+
+    border:none;
+
+    background:none;
+
+    color:#6F4E37;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.delete-btn:hover{
+
+    color:#8B5E3C;
+
+    transform:scale(1.15);
+
+}
+
+/*====================================
+Empty Wishlist
+====================================*/
+
+.empty-message{
+
+    display:none;
+
+    text-align:center;
+
+    padding:90px 20px;
+
+    color:#6F4E37;
+
+}
+
+.empty-message i{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+.empty-message h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+.empty-message p{
+
+    font-size:17px;
+
+    color:#777;
+
+}
+
+/*====================================
+Responsive
+====================================*/
+
+@media(max-width:900px){
+
+    .wishlist-table{
+
+        overflow-x:auto;
+
+    }
+
+    table{
+
+        min-width:850px;
+
+    }
+
+}
